@@ -1,0 +1,478 @@
+trait	category	reason
+Adult body size	Anthropometry - Height and Growth	no sufficiently specific cue
+Body size at age 10	Anthropometry - Height and Growth	no sufficiently specific cue
+Short stature (PheCode 264.1)	Anthropometry - Height and Growth	no sufficiently specific cue
+Obese vs. thin	Anthropometry - Weight and BMI	no sufficiently specific cue
+Serum C-reactive protein concentration in non-obese individuals	Anthropometry - Weight and BMI	no sufficiently specific cue
+Serum interleukin-6 concentration in non-visceral-obese individuals	Anthropometry - Weight and BMI	no sufficiently specific cue
+Urate levels in obese individuals	Anthropometry - Weight and BMI	no sufficiently specific cue
+A body shape index	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Abdominal size (multivariate analysis)	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Appendicular skeletal muscle index in chronic obstructive pulmonary disease	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Appendicular skeletal muscle mass	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Body shape (principal component analysis)	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Body surface area	Anthropometry - Body Composition and Fat Distribution	no sufficiently specific cue
+Lifespan	Aging - Longevity and Healthspan	no sufficiently specific cue
+Morbidity-free survival	Aging - Longevity and Healthspan	no sufficiently specific cue
+Parental lifespan	Aging - Longevity and Healthspan	no sufficiently specific cue
+TB-LM or TBLH-BMD (pleiotropy)	Bone - Density and Osteoporosis	no sufficiently specific cue
+Apparent treatment-resistant hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+COVID-19 or hypertension (pleiotropy)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Cardio-cerebrovascular disease in hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Cardiovascular disease in hypertension (ACE inhibitor interaction)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Cardiovascular disease in hypertension (calcium channel blocker interaction)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Chronic thromboembolic pulmonary hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Chronic venous hypertension (PheCode 453)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Coronary artery disease in hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Dietary Approaches to Stop Hypertension (DASH) diet	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Essential hypertension (PheCode 401.1)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Essential hypertension (time to event)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Gestational hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension (PheCode 401)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension (confirmatory factor analysis Factor 12)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension (young onset)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension 1	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension complicating pregnancy	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension complicating pregnancy, childbirth, and the puerperium (PheCode 642)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension in type 2 diabetes	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Hypertension risk in short sleep duration	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+ICD10 I10: Essential (primary) hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+ICD10 I10: hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+ICD10 O12: Gestational oedema and proteinuria without hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+ICD10 O13: Gestational hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Idiopathic intracranial hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Ischemic stroke in hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Medication use for hypertension (number of purchases)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Myocardial infarction in hypertension (calcium channel blocker interaction)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Portal hypertension (PheCode 571.81)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Preeclampsia or other maternal hypertension (maternal genotype effect)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Primary pulmonary hypertension (PheCode 415.21)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Rapid eGFR decline in diabetes and hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Resistance to antihypertensive treatment in hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Resistant hypertension	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+White matter hyperintensity volume (adjusted for hypertension)	Cardiovascular - Blood Pressure and Hypertension	no sufficiently specific cue
+Electrocardiogram morphology (amplitude at temporal datapoints)	Cardiovascular - Arrhythmias and Conduction	no sufficiently specific cue
+P wave duration	Cardiovascular - Arrhythmias and Conduction	no sufficiently specific cue
+P wave terminal force	Cardiovascular - Arrhythmias and Conduction	no sufficiently specific cue
+PR interval	Cardiovascular - Arrhythmias and Conduction	no sufficiently specific cue
+PR interval in Tripanosoma cruzi seropositivity	Cardiovascular - Arrhythmias and Conduction	no sufficiently specific cue
+E Cad plasma levels	Cardiovascular - Coronary Artery Disease and Atherosclerosis	no sufficiently specific cue
+Heart attack	Cardiovascular - Coronary Artery Disease and Atherosclerosis	no sufficiently specific cue
+Maternal nondisjunction of chromosome 21 (MI error vs MII error)	Cardiovascular - Coronary Artery Disease and Atherosclerosis	no sufficiently specific cue
+Maternal nondisjunction of chromosome 21 (MI error vs fathers)	Cardiovascular - Coronary Artery Disease and Atherosclerosis	no sufficiently specific cue
+Takes medication for heart attack?	Cardiovascular - Coronary Artery Disease and Atherosclerosis	no sufficiently specific cue
+Intracranial aneurysm	Cardiovascular - Vascular Disease and Stroke	no sufficiently specific cue
+Glycosylphosphatidylinositol-anchored high density lipoprotein-binding protein 1 levels	Lipids - HDL Cholesterol	no sufficiently specific cue
+High density lipoprotein cholesterol levels	Lipids - HDL Cholesterol	no sufficiently specific cue
+High density lipoprotein cholesterol levels (UKB data field 30760)	Lipids - HDL Cholesterol	no sufficiently specific cue
+High density lipoprotein cholesterol levels in pregnancy	Lipids - HDL Cholesterol	no sufficiently specific cue
+Low high density lipoprotein cholesterol levels	Lipids - HDL Cholesterol	no sufficiently specific cue
+Cholesterol ester levels in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in very large VLDL meal response (OrNLSr)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol esters in very very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in Large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in Medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in Small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in large VLDL (UKB data field 23498)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in medium VLDL (UKB data field 23505)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in small VLDL (UKB data field 23512)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in very large VLDL (UKB data field 23491)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol in very small VLDL (UKB data field 23519)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol levels in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Medium VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Small VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Very Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to Total Lipids in Very Small VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in chylomicrons and extremely large VLDL percentage (UKB data field 23580)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in large VLDL percentage (UKB data field 23590)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in medium VLDL percentage (UKB data field 23595)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in small VLDL percentage (UKB data field 23600)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in very large VLDL percentage (UKB data field 23585)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids in very small VLDL percentage (UKB data field 23605)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Cholesterol to total lipids ratio in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Direct low density lipoprotein cholesterol levels	Lipids - LDL Cholesterol	no sufficiently specific cue
+Direct low density lipoprotein levels (UKB data field 30780)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting cholesterol esters in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting free cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting free cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting free cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting free cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting free cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting total cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting total cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting total cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting total cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Fasting total cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Medium VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Small VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Very Large VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free Cholesterol to Total Lipids in Very Small VLDL percentage	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in large VLDL (UKB data field 23500)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in medium VLDL (UKB data field 23507)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in small VLDL (UKB data field 23514)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very large VLDL (UKB data field 23493)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very large VLDL meal response (OrNLSr)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very small VLDL (UKB data field 23521)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol in very very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol levels in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in chylomicrons and extremely large VLDL percentage (UKB data field 23582)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in large VLDL percentage (UKB data field 23592)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in medium VLDL percentage (UKB data field 23597)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in small VLDL percentage (UKB data field 23602)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in very large VLDL percentage (UKB data field 23587)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids in very small VLDL percentage (UKB data field 23607)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Free cholesterol to total lipids ratio in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Low density lipoprotein cholesterol levels	Lipids - LDL Cholesterol	no sufficiently specific cue
+Low density lipoprotein cholesterol levels (on statin treatment)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Low density lipoprotein cholesterol levels in pregnancy	Lipids - LDL Cholesterol	no sufficiently specific cue
+Low density lipoprotein receptor adapter protein 1 levels	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial cholesterol esters in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial free cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial free cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial free cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial free cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial free cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial total cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial total cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial total cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial total cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Postprandial total cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Serum levels of protein APOB	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total Cholesterol in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in very large VLDL meal response (OrNLSr)	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol in very very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol levels in VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol levels in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol levels in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol levels in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in chylomicrons and extremely large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in medium VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in very large VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Total cholesterol to total lipids ratio in very small VLDL	Lipids - LDL Cholesterol	no sufficiently specific cue
+Very low density lipoprotein cholesterol levels	Lipids - LDL Cholesterol	no sufficiently specific cue
+Apolipoprotein A levels (UKB data field 30630)	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Apolipoprotein A-I levels	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Apolipoprotein A-II level in Chronic kidney disease with hypertension and no diabetes (7127_3)	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Apolipoprotein A-II levels	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Apolipoprotein A-II protein level	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Apolipoprotein A-IV levels	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Fasting apolipoprotein A-I	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Postprandial apolipoprotein A-I	Lipids - Total and Other Cholesterol	no sufficiently specific cue
+Docosahexaenoate (DHA; 22:6n3) levels	Lipids - Fatty Acids	no sufficiently specific cue
+Metabolite levels (docosahexaenoate (DHA; 22:6n3); docosahexaenoate)	Lipids - Fatty Acids	no sufficiently specific cue
+Plasma metabolome feature (c18_4075) (1-(9Z-octadecenoyl)-sn-glycero-3-phosphoserine)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (c18_4427) (1-hexadecanoyl-sn-glycero-3-phospho-(1-myo-inositol))	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (c18_4704) (1-(5Z8Z11Z14Z17Z-eicosapentaenoyl)-glycero-3-phospho-(1-myo-inositol))	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (c18_5363) (1-eicosyl-2-(4Z7Z10Z13Z16Z19Z-docosahexaenoyl)-glycero-3-phosphoserine)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (c18_5367) (1-eicosyl-2-(7Z10Z13Z16Z-docosatetraenoyl)-glycero-3-phosphoserine)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (hilic_5958) (1-(10Z13Z16Z-nonadecatrienoyl)-sn-glycero-3-phosphocholine)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Plasma metabolome feature (hilic_6515) (1-(1Z-eicosenyl)-glycero-3-phospho-(1-myo-inositol))	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Vaginal microbiome MetaCyc pathway (PWY-6478|GDP-D-glycero-&alpha;-D-manno-heptose biosynthesis)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Vaginal microbiome MetaCyc pathway (PWY0-1241|ADP-L-glycero-&beta;-D-manno-heptose biosynthesis)	Lipids - Phospholipids and Complex Lipids	no sufficiently specific cue
+Diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes (confirmatory factor analysis Factor 28)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes (gestational)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes (incident)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes (standard GWA)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes (weighted GWA)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetes related insulin traits	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Estimated glomerular filtration rate in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Foot ulcer and neuropathy in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Foot ulcer in diabetes and neuropathy	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Gestational diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Gestational diabetes in nulliparas	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Glomerular filtration rate in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Glycated hemoglobin levels	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Hemoglobin A1c levels	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Illnesses of father - Diabetes (UKB data field 20107)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Illnesses of father: Diabetes (UKB data field 20107_9)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Kidney disease (end stage renal disease or macroalbuminuria or microalbuminuria) in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Kidney disease (end stage renal disease vs macroalbuminuria) in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Latent autoimmune diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Medication use (drugs used in diabetes)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Medication use for T2D (number of purchases)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Medication use for T2D (use of second-line agents)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Microalbuminuria in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Peripheral artery disease in non diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Polyneuropathy in diabetes (PheCode 250.6)	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Rapid eGFR decline in diabetes and hypertension	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Reduced eGFR in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Type ii diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Urinary albumin-to-creatinine ratio in diabetes	Diabetes - Type 2 Diabetes and Glucose Metabolism	no sufficiently specific cue
+Diabetic nephropathy	Metabolic - Metabolic Syndrome and Complications	no sufficiently specific cue
+Diabetic nephropathy in type 1 diabetes	Metabolic - Metabolic Syndrome and Complications	no sufficiently specific cue
+Diabetic neuropathy in type 2 diabetes	Metabolic - Metabolic Syndrome and Complications	no sufficiently specific cue
+Obesity without metabolic disease	Metabolic - Metabolic Syndrome and Complications	no sufficiently specific cue
+Addison's disease	Metabolic - Hormones	no sufficiently specific cue
+Cushing's syndrome (PheCode 255.11)	Metabolic - Hormones	no sufficiently specific cue
+Free T4 levels	Metabolic - Hormones	no sufficiently specific cue
+Free triiodothyronine (T3) levels	Metabolic - Hormones	no sufficiently specific cue
+T4 levels	Metabolic - Hormones	no sufficiently specific cue
+Plateletcrit	Hematology - Platelets and Coagulation	no sufficiently specific cue
+Plateletcrit variance	Hematology - Platelets and Coagulation	no sufficiently specific cue
+Antiviral innate immune response receptor RIG-I levels	Immunity - Immunoglobulins and Antibodies	no sufficiently specific cue
+Epstein-Barr virus immune response (EBNA-1)	Immunity - Immunoglobulins and Antibodies	no sufficiently specific cue
+Epstein-Barr virus immune response (multivariate analysis)	Immunity - Immunoglobulins and Antibodies	no sufficiently specific cue
+IgM levels	Immunity - Immunoglobulins and Antibodies	no sufficiently specific cue
+Candida albicans stimulated IL-8 levels	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+Group IIA secretory phospholipase A2 levels in individuals with elevated hsCRP	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+High IL-1beta levels in gingival crevicular fluid	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-12 levels	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-16 level (CSF)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-16 levels	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-17E level (plasma)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-1F6 level (CSF)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-22 level (CSF)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-23 level (plasma)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-34 level (CSF)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL-9 level (CSF)	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+IL8 levels	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+Serum levels of protein CRP	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+Serum levels of protein IL5	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+Serum levels of protein IL9	Immunity - Inflammatory Markers and Cytokines	no sufficiently specific cue
+Addison's disease	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Fatigue in primary Sjögren's syndrome	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+IgA nephropathy	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Limited cutaneous systemic scleroderma	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Serum galactose-deficient IgA1 levels in IgA nephropathy	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Sjögren's syndrome	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Takayasu arteritis	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Thyroid autoantibody positivity (anti-thyroglobulin (TgAb) and/or anti-thyroid peroxidase  (TPOAb) levels)	Autoimmune and Inflammatory Diseases	no sufficiently specific cue
+Bacterial infection NOS (PheCode 41)	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+Chronic Chagas Cardiomyopathy in Chagas disease	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+Gut microbiome abundance (class Clostridioides difficile) (at 1 year)	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+Invasive bacterial infection	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+Pulmonary mycobacterium avium complex disease	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+Scarlet fever	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+TB-LM or TBLH-BMD (pleiotropy)	Infectious Disease - Bacterial and Parasitic	no sufficiently specific cue
+AIDS	Infectious Disease - Viral	no sufficiently specific cue
+AIDS progression	Infectious Disease - Viral	no sufficiently specific cue
+Seropositivity (peptide co-occurrence module 1: CMV, (others))	Infectious Disease - Viral	no sufficiently specific cue
+Cytomegalovirus antibody response	Infectious Disease - Immune Response and Susceptibility	no sufficiently specific cue
+Rheumatoid arthritis (rheumatoid factor and/or anti-cyclic citrullinated peptide seropositive)	Infectious Disease - Immune Response and Susceptibility	no sufficiently specific cue
+Systemic seropositive rheumatic diseases (Systemic sclerosis or systemic lupus erythematosus or rheumatoid arthritis or idiopathic inflammatory myopathies)	Infectious Disease - Immune Response and Susceptibility	no sufficiently specific cue
+Actinic keratosis	Cancer - Solid Tumors	no sufficiently specific cue
+Actinic keratosis (PheCode 702.1)	Cancer - Solid Tumors	no sufficiently specific cue
+Esophageal or stomach cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Gallbladder cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Glioblastoma	Cancer - Solid Tumors	no sufficiently specific cue
+Glioblastoma (age-stratified)	Cancer - Solid Tumors	no sufficiently specific cue
+ICD10 C23: Gallbladder cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Keratinocyte cancer (MTAG)	Cancer - Solid Tumors	no sufficiently specific cue
+Kidney cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Meningioma	Cancer - Solid Tumors	no sufficiently specific cue
+Nasopharyngeal carcinoma	Cancer - Solid Tumors	no sufficiently specific cue
+Rectal cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Survival in rectal cancer	Cancer - Solid Tumors	no sufficiently specific cue
+Uterine cancer	Cancer - Hormone-Dependent	no sufficiently specific cue
+Hodgkin's disease (PheCode 201)	Cancer - Hematological	no sufficiently specific cue
+Breast cancer or COVID-19 infection (pleiotropy)	Cancer - General Risk and Pleiotropy	no sufficiently specific cue
+Endometrial cancer or COVID-19 infection (pleiotropy)	Cancer - General Risk and Pleiotropy	no sufficiently specific cue
+Ovarian cancer or COVID-19 infection (pleiotropy)	Cancer - General Risk and Pleiotropy	no sufficiently specific cue
+Alzheimer's disease with memory domain impairment	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Cognitive processing speed	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Depression, cognition and memory (multivariate analysis)	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Episodic memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Episodic memory (pairs-matching)	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Face memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+General cognitive ability	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Information processing speed (symbol digit substitution)	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Memory dysfunction in frontotemporal lobe dementia	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Spatial memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Static spatial working memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Verbal declarative memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Verbal memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Visual memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Working memory	Neuropsychiatric - Cognitive Function and Intelligence	no sufficiently specific cue
+Agorophobia, social phobia, and panic disorder (PheCode 300.12)	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Antidepressant-associated treatment emergent mania in BD	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Eating disorder (PheCode 305.2)	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Education attainment or tourette’s syndrome	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Panic disorder	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Remission after SSRI treatment in MDD or neuroticism	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Remission after SSRI treatment in MDD or openness	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Substance use disorder	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Substance use disorder (pleiotropy)	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Tourette syndrome	Neuropsychiatric - Psychiatric Disorders	no sufficiently specific cue
+Essential tremor	Neuropsychiatric - Neurodegenerative Diseases	no sufficiently specific cue
+Essential tremor (PheCode 333.1)	Neuropsychiatric - Neurodegenerative Diseases	no sufficiently specific cue
+Other demyelinating diseases of central nervous system (PheCode 341)	Neuropsychiatric - Neurodegenerative Diseases	no sufficiently specific cue
+Cognitive empathy	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Externalizing behaviour (multivariate analysis)	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Externalizing behaviour score	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Morning person	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Restless legs syndrome	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Restless legs syndrome (PheCode 327.71)	Neuropsychiatric - Neurological Sleep and Behavior	no sufficiently specific cue
+Alanine transaminase (ALT, maximum, inv-norm transformed)	Liver - Function and Enzymes	no sufficiently specific cue
+Alanine transaminase (ALT, mean, inv-norm transformed)	Liver - Function and Enzymes	no sufficiently specific cue
+Alanine transaminase (ALT, minimum, inv-norm transformed)	Liver - Function and Enzymes	no sufficiently specific cue
+Acute glomerulonephritis	Kidney - Disease	no sufficiently specific cue
+Childhood steroid-sensitive nephrotic syndrome	Kidney - Disease	no sufficiently specific cue
+Chronic glomerulonephritis	Kidney - Disease	no sufficiently specific cue
+Chronic glomerulonephritis, NOS (PheCode 580.14)	Kidney - Disease	no sufficiently specific cue
+Chronic renal failure [CKD] (PheCode 585.3)	Kidney - Disease	no sufficiently specific cue
+End stage renal disease (PheCode 585.32)	Kidney - Disease	no sufficiently specific cue
+End stage renal disease in APOL1 risk genotype-negative individuals	Kidney - Disease	no sufficiently specific cue
+End-stage renal disease	Kidney - Disease	no sufficiently specific cue
+End-stage renal disease (non-diabetic)	Kidney - Disease	no sufficiently specific cue
+End-stage renal disease in Type 1 diabetics	Kidney - Disease	no sufficiently specific cue
+End-stage renal disease in diabetes	Kidney - Disease	no sufficiently specific cue
+End-stage renal disease in type 2 diabetes	Kidney - Disease	no sufficiently specific cue
+Glomerulonephritis (PheCode 580.1)	Kidney - Disease	no sufficiently specific cue
+Hypertensive heart and/or renal disease (PheCode 401.2)	Kidney - Disease	no sufficiently specific cue
+Hypertensive renal disease	Kidney - Disease	no sufficiently specific cue
+ICD10 N20-N23: Urolithiasis	Kidney - Disease	no sufficiently specific cue
+Nephrolithiasis	Kidney - Disease	no sufficiently specific cue
+Nephrotic syndrome	Kidney - Disease	no sufficiently specific cue
+Nephrotic syndrome (acquired)	Kidney - Disease	no sufficiently specific cue
+Nephrotic syndrome without mention of glomerulonephritis (PheCode 580.2)	Kidney - Disease	no sufficiently specific cue
+Non-proliferative glomerulonephritis (PheCode 580.12)	Kidney - Disease	no sufficiently specific cue
+Pediatric steroid sensitive nephrotic syndrome	Kidney - Disease	no sufficiently specific cue
+Primary membranoproliferative glomerulonephritis	Kidney - Disease	no sufficiently specific cue
+Proliferative glomerulonephritis (PheCode 580.11)	Kidney - Disease	no sufficiently specific cue
+Steroid-dependent/frequent relapse nephrotic syndrome	Kidney - Disease	no sufficiently specific cue
+Steroid-sensitive nephrotic syndrome without relapse	Kidney - Disease	no sufficiently specific cue
+Urolithiasis	Kidney - Disease	no sufficiently specific cue
+Chronic kidney disease (severe chronic kidney disease vs normal kidney function) in type 1 diabetes	Kidney - Function	no sufficiently specific cue
+Kidney function decline traits	Kidney - Function	no sufficiently specific cue
+Lung function	Respiratory - Lung Function	no sufficiently specific cue
+Lung function (maximal voluntary ventilation)	Respiratory - Lung Function	no sufficiently specific cue
+Peak expiratory flow	Respiratory - Lung Function	no sufficiently specific cue
+Peak expiratory flow (UKB data field 3064)	Respiratory - Lung Function	no sufficiently specific cue
+Refractory celiac disease type II	Gastrointestinal - Inflammatory Bowel Disease	no sufficiently specific cue
+Takes medication for celiac disease/sprue?	Gastrointestinal - Inflammatory Bowel Disease	no sufficiently specific cue
+Coeliac disease	Gastrointestinal - Celiac Disease and Malabsorption	no sufficiently specific cue
+Diverticulitis	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+Diverticulitis (PheCode 562.2)	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+Esophagitis, GERD and related diseases (PheCode 530.1)	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+GERD (PheCode 530.11)	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+Gallstone disease	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+Haemorrhoidal disease	Gastrointestinal - Other GI Disorders	no sufficiently specific cue
+Dry eye disease	Ophthalmology - Eye Disease and Vision	no sufficiently specific cue
+Dry eye disease with Sjogren-like syndromes	Ophthalmology - Eye Disease and Vision	no sufficiently specific cue
+Hyperopia	Ophthalmology - Eye Disease and Vision	no sufficiently specific cue
+Refractive error	Ophthalmology - Eye Disease and Vision	no sufficiently specific cue
+Refractive error (autorefraction measured)	Ophthalmology - Eye Disease and Vision	no sufficiently specific cue
+Disc degeneration (lumbar)	Musculoskeletal - Arthritis and Connective Tissue	no sufficiently specific cue
+Fatigue in primary Sjögren's syndrome	Musculoskeletal - Arthritis and Connective Tissue	no sufficiently specific cue
+Limited cutaneous systemic scleroderma	Musculoskeletal - Arthritis and Connective Tissue	no sufficiently specific cue
+Sjögren's syndrome	Musculoskeletal - Arthritis and Connective Tissue	no sufficiently specific cue
+Inflammatory skin disease	Dermatology - Skin Conditions and Pigmentation	no sufficiently specific cue
+Rosacea (PheCode 695.3)	Dermatology - Skin Conditions and Pigmentation	no sufficiently specific cue
+Rosacea symptom severity	Dermatology - Skin Conditions and Pigmentation	no sufficiently specific cue
+Skin phototype score	Dermatology - Skin Conditions and Pigmentation	no sufficiently specific cue
+Bitter taste perception	Sensory - Taste and Smell	no sufficiently specific cue
+Bitter taste perception (multivariate analysis)	Sensory - Taste and Smell	no sufficiently specific cue
+Bitter taste response	Sensory - Taste and Smell	no sufficiently specific cue
+Disturbances of sensation of smell and taste (PheCode 350.6)	Sensory - Taste and Smell	no sufficiently specific cue
+F-acquired taste liking (derived food-liking factor)	Sensory - Taste and Smell	no sufficiently specific cue
+Sense of smell	Sensory - Taste and Smell	no sufficiently specific cue
+Sweet taste preference	Sensory - Taste and Smell	no sufficiently specific cue
+Dehydroepiandrosterone sulphate levels	Reproductive - Sex Hormones and Fertility	no sufficiently specific cue
+FSH level (CSF)	Reproductive - Sex Hormones and Fertility	no sufficiently specific cue
+Hypogonadism	Reproductive - Sex Hormones and Fertility	no sufficiently specific cue
+ICD10 D25: Leiomyoma of uterus	Reproductive - Sex Hormones and Fertility	no sufficiently specific cue
+ICD10 O14: Pre-eclampsia	Reproductive - Sex Hormones and Fertility	no sufficiently specific cue
+Atopy	Allergy and Hypersensitivity	no sufficiently specific cue
+Eosinophilic esophagitis	Allergy and Hypersensitivity	no sufficiently specific cue
+Eosinophilic esophagitis (pediatric)	Allergy and Hypersensitivity	no sufficiently specific cue
+Alcohol frequency weekly (standard GWA)	Behavioral - Substance Use	no sufficiently specific cue
+Alcohol frequency weekly (weighted GWA)	Behavioral - Substance Use	no sufficiently specific cue
+Drinks per week	Behavioral - Substance Use	no sufficiently specific cue
+Cognitive empathy	Behavioral - Risk-Taking and Social	no sufficiently specific cue
+Athlete's foot (PheCode 110.12)	Lifestyle - Physical Activity and Diet	no sufficiently specific cue
+Occupation and workplace environment (confirmatory factor analysis Factor 5)	Lifestyle - Physical Activity and Diet	no sufficiently specific cue
+Regular attendance at a gym or sports club	Lifestyle - Physical Activity and Diet	no sufficiently specific cue
+Self-employment	Lifestyle - Physical Activity and Diet	no sufficiently specific cue
+Strenuous sports or other exercises	Lifestyle - Physical Activity and Diet	no sufficiently specific cue
+Airways medication use	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Current medication use (UKB data field 20003)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Lipid lowering medication use	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication adherence in chronic diseases	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication for pain relief constipation heartburn - Aspirin (UKB data field 6154)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (HMG CoA reductase inhibitors)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (adrenergics, inhalants)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (anilides)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (anti-inflammatory and antirheumatic products, non-steroids)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (antidepressants)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (antihistamines for systemic use)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (antihypertensives)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (calcium channel blockers)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (diuretics)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (estrogens and progestogens)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (glucocorticoids)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (immunosuppressants)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (opioids)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (salicylic acid and derivatives)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Medication use (vasodilators used in cardiac diseases)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Peginterferon alfa-2a treatment response in chronic hepatitis B infection	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Treatment response for severe sepsis	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Urinary albumin excretion (no hypertensive medication)	Pharmacogenomics - Drug Response	no sufficiently specific cue
+Cobalamin binding intrinsic factor levels	Vitamins and Micronutrients	no sufficiently specific cue
+Hyperuricemia in high niacin intake	Vitamins and Micronutrients	no sufficiently specific cue
+Hyperuricemia in low niacin intake	Vitamins and Micronutrients	no sufficiently specific cue
+PTH protein levels	Vitamins and Micronutrients	no sufficiently specific cue
+Riboflavin kinase levels	Vitamins and Micronutrients	no sufficiently specific cue
+Riboflavin kinase levels (RFK.13059.33.3)	Vitamins and Micronutrients	no sufficiently specific cue
+Riboflavin to 3-Indolepropionic acid ratio in coronary artery disease	Vitamins and Micronutrients	no sufficiently specific cue
+Thiamine-triphosphatase levels	Vitamins and Micronutrients	no sufficiently specific cue
+HDL-cholesterol level in antipsychotic-treated schizophrenia (4-week)	Lipids - Total and Other Cholesterol	cue excluded by a collision guard; kept as curated member
+HDL-cholesterol level in antipsychotic-treated schizophrenia (6-week)	Lipids - Total and Other Cholesterol	cue excluded by a collision guard; kept as curated member
+Non-HDL cholesterol levels	Lipids - Total and Other Cholesterol	cue excluded by a collision guard; kept as curated member
+Acute lymphoblastic leukemia in childhood (B cell precursor)	Hematology - White Blood Cells	cue excluded by a collision guard; kept as curated member
+Diffuse large B cell lymphoma	Hematology - White Blood Cells	cue excluded by a collision guard; kept as curated member
+Log white blood cell count in acute lymphoblastic leukemia	Hematology - White Blood Cells	cue excluded by a collision guard; kept as curated member
+Spline residuals of log white blood cell count in acute lymphoblastic leukemia	Hematology - White Blood Cells	cue excluded by a collision guard; kept as curated member
+Multiple sclerosis or amyotrophic lateral sclerosis	Autoimmune and Inflammatory Diseases	cue excluded by a collision guard; kept as curated member

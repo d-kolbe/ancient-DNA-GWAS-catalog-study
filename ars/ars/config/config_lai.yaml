@@ -1,0 +1,79 @@
+# ============================================================================
+# Configuration -- LAI Pipeline (UK Biobank 500k, all samples)
+# ============================================================================
+# Paths are relative to the project folder (run Snakemake from there).
+# Site-specific overrides (absolute paths, existing conda env, the UKB file
+# name pattern) go into config/config_lai.local.yaml (gitignored).
+
+# Output settings
+# ============================================================================
+output_dir: "results/lai"
+
+# Scratch space for temporary files
+tmp_dir: "results/tmp"
+
+
+# Input sample list (all ~500k samples, one ID per line)
+# ============================================================================
+# Not part of the repository (UK Biobank participant IDs).
+# NOTE: batch membership depends on the order of the IDs in this file and on
+# random_seed (see below).
+sample_list: "data/all_samples.txt"
+
+
+# UK Biobank raw VCFs (phased, GRCh37/hg19), not part of the repository
+# ============================================================================
+ukb_vcf_dir: "data/ukb_vcf"
+
+# {chr} is replaced with the chromosome number (1-22). Adjust to the actual
+# file names in config/config_lai.local.yaml.
+ukb_vcf_pattern: "c{chr}/ukb_chr{chr}.phased.vcf.gz"
+
+
+# FLARE variant list
+# ============================================================================
+# ~2M variants used as FLARE input
+# Format: chr  pos  ref  alt  (tab-delimited, no header)
+# Only chr and pos are used to extract the variants.
+flare_variants_file: "resources/intersect_all_v2.cpra"
+
+
+# Stable FLARE output directory (final per-chr merged VCFs land here)
+# ============================================================================
+stable_flare_outputs:
+  dir: "results/lai/stable"
+
+
+# Sample batching
+# ============================================================================
+flare_batch_size: 5000   # samples per batch  (~100 batches for 500k samples)
+random_seed:      42     # reproducible shuffle
+
+# Hierarchical merge: batches are grouped before final merge
+# 100 batches / 20 per group = 5 intermediate files per chromosome
+merge_group_size: 20
+
+
+# FLARE inputs
+# ============================================================================
+flare_jar:   "software/flare.jar"
+sample_map:  "resources/WHG_AF_EF_ST.flt.samplemap"
+genetic_map: "data/genetic_maps.b37.plinkFormat.txt"
+
+# Ancient reference panel VCF
+vcf_reference: "data/Ancient_hicov.StrictMask.RepeatMasker.MAF5.INFO90.vcf.gz"
+
+
+# FLARE parameters
+# ============================================================================
+generations: 225
+
+# Reference panel (ancient) MAF/MAC filters
+# Permissive -- these apply to the ancient reference, not the modern samples
+min_maf: 0.001
+min_mac: 1
+
+# Memory and threading
+flare_mem_mb:      120000   # SLURM memory request (MB)
+flare_java_memory: "90g"    # Java heap (~75% of total)
+flare_threads:     20       # FLARE internal threads

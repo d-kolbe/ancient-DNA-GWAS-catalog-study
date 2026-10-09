@@ -1,0 +1,1967 @@
+# Keyword cues per category (Layer 1 of build_gwas_categories.py).
+# Reconstructed from the frozen vocabulary by derive_category_cues.py; see that script.
+# cue        : lower-case word or phrase, matched on word boundaries
+# covers     : number of frozen members of this category containing the cue
+# precision  : share of ALL frozen traits containing the cue that are members of this category
+# Edit freely: add cues to raise recall, delete cues that over-assign.
+
+# exclude   : collision guards learned by refine_cues_from_report.py from a real run;
+#              a trait containing one of them is not assigned to this category by cues.
+
+# exclude   : collision guards learned by refine_cues_from_report.py from a real run;
+#              a trait containing one of them is not assigned to this category by cues.
+
+categories:
+  Anthropometry - Height and Growth:
+    definition: Stature, standing/sitting height, growth rate, peak height velocity, short stature.
+    n_frozen_members: 35
+    n_covered_by_cues: 32
+    cues:
+    - cue: height
+      covers: 32
+      precision: 0.86
+  Anthropometry - Weight and BMI:
+    definition: Body weight, BMI, obesity, weight change.
+    n_frozen_members: 310
+    n_covered_by_cues: 306
+    cues:
+    - cue: bmi
+      covers: 130
+      precision: 1.0
+    - cue: body mass index
+      covers: 78
+      precision: 1.0
+    - cue: obesity
+      covers: 59
+      precision: 1.0
+    - cue: weight
+      covers: 29
+      precision: 0.97
+    - cue: overweight
+      covers: 18
+      precision: 1.0
+  Anthropometry - Body Composition and Fat Distribution:
+    definition: Fat mass/percentage, lean mass, WHR, regional adiposity, body composition.
+    n_frozen_members: 210
+    n_covered_by_cues: 204
+    cues:
+    - cue: hip
+      covers: 79
+      precision: 0.82
+    - cue: fat
+      covers: 56
+      precision: 0.72
+    - cue: adipose
+      covers: 43
+      precision: 1.0
+    - cue: waist circumference
+      covers: 19
+      precision: 1.0
+    - cue: lean mass
+      covers: 12
+      precision: 1.0
+    exclude:
+    - cue: fat diet
+      removes_collisions: 5
+      removes_members: 0
+      removes_other_extras: 2
+    - cue: liver
+      removes_collisions: 4
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: measurement of hepatic
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+  Aging - Longevity and Healthspan:
+    definition: Lifespan, longevity, healthspan, parental longevity, frailty, epigenetic age.
+    n_frozen_members: 39
+    n_covered_by_cues: 36
+    cues:
+    - cue: longevity
+      covers: 19
+      precision: 1.0
+    - cue: frailty
+      covers: 8
+      precision: 1.0
+    - cue: aging
+      covers: 7
+      precision: 0.88
+    - cue: healthspan
+      covers: 4
+      precision: 1.0
+  Bone - Density and Osteoporosis:
+    definition: Bone mineral density, osteoporosis, fracture.
+    n_frozen_members: 103
+    n_covered_by_cues: 102
+    cues:
+    - cue: bone
+      covers: 89
+      precision: 0.89
+    - cue: osteoporosis
+      covers: 15
+      precision: 1.0
+    exclude:
+    - cue: cancer bone metastasis
+      removes_collisions: 4
+      removes_members: 0
+      removes_other_extras: 0
+  Cardiovascular - Blood Pressure and Hypertension:
+    definition: BP traits and hypertension.
+    n_frozen_members: 157
+    n_covered_by_cues: 121
+    cues:
+    - cue: pressure
+      covers: 100
+      precision: 0.9
+    - cue: treatment effectiveness
+      covers: 9
+      precision: 1.0
+    - cue: bendroflumethiazide treated hypertension
+      covers: 5
+      precision: 1.0
+    - cue: pulmonary arterial hypertension
+      covers: 4
+      precision: 1.0
+    - cue: new onset hypertension
+      covers: 3
+      precision: 1.0
+    exclude:
+    - cue: intraocular pressure
+      removes_collisions: 11
+      removes_members: 0
+      removes_other_extras: 0
+  Cardiovascular - Arrhythmias and Conduction:
+    definition: Arrhythmias, AF, QT/PR intervals, conduction.
+    n_frozen_members: 119
+    n_covered_by_cues: 114
+    cues:
+    - cue: ventricular
+      covers: 76
+      precision: 1.0
+    - cue: atrial
+      covers: 13
+      precision: 0.81
+    - cue: qrs
+      covers: 9
+      precision: 1.0
+    - cue: qt interval
+      covers: 6
+      precision: 1.0
+    - cue: ecg
+      covers: 6
+      precision: 1.0
+    - cue: cardiac arrest
+      covers: 5
+      precision: 1.0
+    - cue: arrhythmia
+      covers: 4
+      precision: 1.0
+    exclude:
+    - cue: atrial stroke volume
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Cardiovascular - Cardiac Structure and Function:
+    definition: Cardiac chamber size, ejection fraction, wall thickness, imaging-derived structure.
+    n_frozen_members: 66
+    n_covered_by_cues: 66
+    cues:
+    - cue: left ventricular
+      covers: 46
+      precision: 1.0
+    - cue: heart rate
+      covers: 16
+      precision: 1.0
+    - cue: ejection fraction
+      covers: 8
+      precision: 1.0
+  Cardiovascular - Heart Failure and Cardiomyopathy:
+    definition: Heart failure, cardiomyopathy.
+    n_frozen_members: 34
+    n_covered_by_cues: 34
+    cues:
+    - cue: cardiomyopathy
+      covers: 18
+      precision: 1.0
+    - cue: heart failure
+      covers: 16
+      precision: 1.0
+  Cardiovascular - Coronary Artery Disease and Atherosclerosis:
+    definition: CAD, MI, atherosclerosis, coronary calcification.
+    n_frozen_members: 225
+    n_covered_by_cues: 220
+    cues:
+    - cue: coronary
+      covers: 198
+      precision: 1.0
+    - cue: myocardial infarction
+      covers: 14
+      precision: 1.0
+    - cue: angina
+      covers: 9
+      precision: 1.0
+    - cue: ischemic heart
+      covers: 6
+      precision: 1.0
+  Cardiovascular - Vascular Disease and Stroke:
+    definition: Stroke, peripheral/cerebral vascular disease, aneurysm.
+    n_frozen_members: 184
+    n_covered_by_cues: 183
+    cues:
+    - cue: stroke
+      covers: 76
+      precision: 1.0
+    - cue: aortic
+      covers: 28
+      precision: 1.0
+    - cue: arterial
+      covers: 24
+      precision: 1.0
+    - cue: venous
+      covers: 22
+      precision: 1.0
+    - cue: peripheral artery disease
+      covers: 17
+      precision: 1.0
+    - cue: cerebrovascular
+      covers: 12
+      precision: 1.0
+    - cue: thrombosis
+      covers: 13
+      precision: 1.0
+    - cue: raynaud s
+      covers: 3
+      precision: 1.0
+  Lipids - HDL Cholesterol:
+    definition: HDL-C levels and HDL-specific traits.
+    n_frozen_members: 290
+    n_covered_by_cues: 285
+    cues:
+    - cue: hdl
+      covers: 282
+      precision: 1.0
+    - cue: lipoprotein cholesterol hdlc
+      covers: 3
+      precision: 1.0
+  Lipids - LDL Cholesterol:
+    definition: LDL-C levels and LDL-specific traits.
+    n_frozen_members: 388
+    n_covered_by_cues: 254
+    cues:
+    - cue: ldl
+      covers: 227
+      precision: 1.0
+    - cue: apolipoprotein b
+      covers: 10
+      precision: 1.0
+    - cue: cholesterol in chylomicrons
+      covers: 6
+      precision: 1.0
+    - cue: cholesterol in vldl
+      covers: 4
+      precision: 1.0
+    - cue: chylomicron and extremely
+      covers: 4
+      precision: 0.8
+    - cue: lipoprotein cholesterol ldlc
+      covers: 3
+      precision: 1.0
+  Lipids - Total and Other Cholesterol:
+    definition: Total cholesterol, non-HDL, remnant cholesterol, ratios not specific to LDL/HDL.
+    n_frozen_members: 620
+    n_covered_by_cues: 612
+    cues:
+    - cue: vldl
+      covers: 359
+      precision: 1.0
+    - cue: cholesterol
+      covers: 302
+      precision: 0.7
+    - cue: cholesteryl
+      covers: 98
+      precision: 0.72
+    - cue: idl
+      covers: 54
+      precision: 1.0
+    - cue: apolipoprotein a v
+      covers: 5
+      precision: 1.0
+    exclude:
+    - cue: lipoprotein
+      removes_collisions: 20
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: hdl cholesterol
+      removes_collisions: 21
+      removes_members: 3
+      removes_other_extras: 0
+    - cue: ldl cholesterol levels
+      removes_collisions: 13
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: esters in ldl
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: esters in hdl
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Lipids - Triglycerides:
+    definition: Triglyceride levels.
+    n_frozen_members: 150
+    n_covered_by_cues: 150
+    cues:
+    - cue: triacylglycerol
+      covers: 102
+      precision: 1.0
+    - cue: triglyceride
+      covers: 48
+      precision: 1.0
+  Lipids - Fatty Acids:
+    definition: Fatty acid levels (saturated, MUFA, PUFA, omega-3/6).
+    n_frozen_members: 188
+    n_covered_by_cues: 186
+    cues:
+    - cue: fatty
+      covers: 141
+      precision: 0.89
+    - cue: linoleic acid
+      covers: 19
+      precision: 1.0
+    - cue: docosahexaenoic acid
+      covers: 15
+      precision: 1.0
+    - cue: arachidonic acid
+      covers: 7
+      precision: 1.0
+    - cue: eicosapentaenoate epa 20
+      covers: 5
+      precision: 1.0
+    - cue: degree of unsaturation
+      covers: 5
+      precision: 1.0
+    - cue: eicosapentaenoic acid
+      covers: 5
+      precision: 1.0
+    - cue: levels and trail
+      covers: 6
+      precision: 1.0
+    exclude:
+    - cue: fatty liver
+      removes_collisions: 18
+      removes_members: 0
+      removes_other_extras: 0
+  Lipids - Lipoproteins:
+    definition: Lipoprotein(a), apolipoproteins, lipoprotein particle traits.
+    n_frozen_members: 86
+    n_covered_by_cues: 86
+    cues:
+    - cue: lipoprotein
+      covers: 86
+      precision: 1.0
+  Lipids - Phospholipids and Complex Lipids:
+    definition: Phospholipids, sphingolipids, ceramides, complex lipid species.
+    n_frozen_members: 810
+    n_covered_by_cues: 801
+    cues:
+    - cue: gpc
+      covers: 218
+      precision: 1.0
+    - cue: sphingomyelin
+      covers: 213
+      precision: 1.0
+    - cue: gpe
+      covers: 111
+      precision: 1.0
+    - cue: ceramide
+      covers: 107
+      precision: 1.0
+    - cue: phospholipid
+      covers: 57
+      precision: 1.0
+    - cue: gpi
+      covers: 49
+      precision: 1.0
+    - cue: diacylglycerol
+      covers: 46
+      precision: 1.0
+  Diabetes - Type 1 Diabetes:
+    definition: Type 1 diabetes and its complications.
+    n_frozen_members: 59
+    n_covered_by_cues: 59
+    cues:
+    - cue: type 1 diabetes
+      covers: 55
+      precision: 1.0
+    - cue: dependent diabetes mellitus
+      covers: 4
+      precision: 1.0
+  Diabetes - Type 2 Diabetes and Glucose Metabolism:
+    definition: Type 2 diabetes, fasting glucose, HbA1c, glycemic traits.
+    n_frozen_members: 342
+    n_covered_by_cues: 312
+    cues:
+    - cue: type 2
+      covers: 133
+      precision: 0.86
+    - cue: glucose
+      covers: 102
+      precision: 0.98
+    - cue: diabetes mellitus
+      covers: 25
+      precision: 0.96
+    - cue: diabetic
+      covers: 28
+      precision: 0.97
+    - cue: prediabetes
+      covers: 11
+      precision: 1.0
+    - cue: hba1c
+      covers: 9
+      precision: 1.0
+    - cue: diabetes sugar
+      covers: 7
+      precision: 1.0
+    - cue: disease in diabetes
+      covers: 10
+      precision: 1.0
+    - cue: fibrosis related diabetes
+      covers: 4
+      precision: 1.0
+    - cue: glycemic traits
+      covers: 4
+      precision: 1.0
+    - cue: c peptide levels
+      covers: 3
+      precision: 1.0
+    exclude:
+    - cue: receptor
+      removes_collisions: 14
+      removes_members: 0
+      removes_other_extras: 3
+    - cue: phosphatidylinositol 5 phosphate
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Diabetes - Insulin and Insulin Resistance:
+    definition: Insulin levels, insulin resistance/sensitivity, HOMA.
+    n_frozen_members: 111
+    n_covered_by_cues: 111
+    cues:
+    - cue: insulin
+      covers: 105
+      precision: 1.0
+    - cue: homa
+      covers: 6
+      precision: 1.0
+  Metabolic - Metabolic Syndrome and Complications:
+    definition: Metabolic syndrome cluster and its complications.
+    n_frozen_members: 33
+    n_covered_by_cues: 29
+    cues:
+    - cue: metabolic syndrome
+      covers: 18
+      precision: 1.0
+    - cue: diabetic retinopathy
+      covers: 11
+      precision: 1.0
+  Metabolic - Hormones:
+    definition: Non-sex, non-thyroid metabolic hormones (leptin, adiponectin, GH, IGF, cortisol).
+    n_frozen_members: 167
+    n_covered_by_cues: 162
+    cues:
+    - cue: thyroid
+      covers: 41
+      precision: 1.0
+    - cue: like growth factor
+      covers: 21
+      precision: 1.0
+    - cue: leptin
+      covers: 17
+      precision: 1.0
+    - cue: hypothyroidism
+      covers: 10
+      precision: 1.0
+    - cue: thyroxine
+      covers: 9
+      precision: 1.0
+    - cue: growth hormone
+      covers: 8
+      precision: 1.0
+    - cue: goiter
+      covers: 8
+      precision: 1.0
+    - cue: igf
+      covers: 8
+      precision: 1.0
+    - cue: thyroiditis
+      covers: 11
+      precision: 1.0
+    - cue: adrenal
+      covers: 7
+      precision: 1.0
+    - cue: adiponectin
+      covers: 6
+      precision: 1.0
+    - cue: cortisol levels
+      covers: 5
+      precision: 1.0
+    - cue: hyperthyroidism
+      covers: 4
+      precision: 1.0
+    - cue: graves disease
+      covers: 7
+      precision: 1.0
+    - cue: ghrelin levels
+      covers: 4
+      precision: 1.0
+    - cue: igfbp
+      covers: 4
+      precision: 1.0
+  Hematology - White Blood Cells:
+    definition: WBC counts and subsets (neutrophil, lymphocyte, etc.).
+    n_frozen_members: 773
+    n_covered_by_cues: 773
+    cues:
+    - cue: t cell
+      covers: 268
+      precision: 0.93
+    - cue: b cell
+      covers: 165
+      precision: 0.85
+    - cue: monocyte
+      covers: 94
+      precision: 1.0
+    - cue: leukocyte
+      covers: 80
+      precision: 1.0
+    - cue: lymphocyte
+      covers: 100
+      precision: 1.0
+    - cue: neutrophil
+      covers: 46
+      precision: 1.0
+    - cue: eosinophil
+      covers: 29
+      precision: 1.0
+    - cue: basophil
+      covers: 23
+      precision: 1.0
+    - cue: white blood cell
+      covers: 22
+      precision: 1.0
+    exclude:
+    - cue: leukemia
+      removes_collisions: 15
+      removes_members: 3
+      removes_other_extras: 3
+    - cue: domain
+      removes_collisions: 8
+      removes_members: 0
+      removes_other_extras: 3
+    - cue: t cell surface
+      removes_collisions: 5
+      removes_members: 0
+      removes_other_extras: 23
+    - cue: cell lymphoma
+      removes_collisions: 6
+      removes_members: 1
+      removes_other_extras: 2
+    - cue: precursor acute lymphoblastic
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: protein family member
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 1
+    - cue: colorectal cancer
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Hematology - Red Blood Cells and Hemoglobin:
+    definition: RBC count, hemoglobin, hematocrit, MCV/MCH.
+    n_frozen_members: 286
+    n_covered_by_cues: 286
+    cues:
+    - cue: rbc
+      covers: 134
+      precision: 1.0
+    - cue: hemoglobin
+      covers: 50
+      precision: 1.0
+    - cue: red
+      covers: 36
+      precision: 0.84
+    - cue: anemia
+      covers: 25
+      precision: 1.0
+    - cue: reticulocyte
+      covers: 22
+      precision: 1.0
+    - cue: erythrocyte
+      covers: 19
+      precision: 1.0
+    - cue: corpuscular volume
+      covers: 8
+      precision: 1.0
+    - cue: hematocrit
+      covers: 6
+      precision: 1.0
+    exclude:
+    - cue: hair
+      removes_collisions: 6
+      removes_members: 0
+      removes_other_extras: 0
+  Hematology - Platelets and Coagulation:
+    definition: Platelet counts/volume, clotting factors, coagulation.
+    n_frozen_members: 217
+    n_covered_by_cues: 215
+    cues:
+    - cue: platelet
+      covers: 114
+      precision: 1.0
+    - cue: coagulation
+      covers: 36
+      precision: 1.0
+    - cue: fibrinogen
+      covers: 19
+      precision: 1.0
+    - cue: von willebrand factor
+      covers: 17
+      precision: 1.0
+    - cue: thrombosis
+      covers: 13
+      precision: 1.0
+    - cue: factor vii
+      covers: 15
+      precision: 1.0
+    - cue: factor viii levels
+      covers: 7
+      precision: 1.0
+    - cue: factor xi
+      covers: 9
+      precision: 1.0
+  Immunity - Immunoglobulins and Antibodies:
+    definition: Ig levels, antibody titers, IgG glycosylation.
+    n_frozen_members: 471
+    n_covered_by_cues: 467
+    cues:
+    - cue: immunoglobulin
+      covers: 231
+      precision: 1.0
+    - cue: complement
+      covers: 134
+      precision: 1.0
+    - cue: igg
+      covers: 53
+      precision: 1.0
+    - cue: antibody
+      covers: 39
+      precision: 1.0
+    - cue: iga
+      covers: 14
+      precision: 1.0
+    - cue: ige
+      covers: 7
+      precision: 1.0
+  Immunity - Inflammatory Markers and Cytokines:
+    definition: CRP, interleukins, cytokines, inflammatory protein levels.
+    n_frozen_members: 723
+    n_covered_by_cues: 707
+    cues:
+    - cue: interleukin
+      covers: 249
+      precision: 1.0
+    - cue: tumor necrosis factor
+      covers: 117
+      precision: 1.0
+    - cue: chemokine
+      covers: 113
+      precision: 1.0
+    - cue: interferon
+      covers: 53
+      precision: 1.0
+    - cue: c reactive protein
+      covers: 31
+      precision: 1.0
+    - cue: cytokine
+      covers: 28
+      precision: 1.0
+    - cue: serum amyloid
+      covers: 17
+      precision: 1.0
+    - cue: ferritin
+      covers: 14
+      precision: 1.0
+    - cue: tnf
+      covers: 29
+      precision: 1.0
+    - cue: il 1
+      covers: 12
+      precision: 1.0
+    - cue: il6
+      covers: 16
+      precision: 1.0
+    - cue: smallpox secreted il
+      covers: 4
+      precision: 1.0
+    - cue: il 17
+      covers: 4
+      precision: 1.0
+    - cue: ra level
+      covers: 3
+      precision: 1.0
+    - cue: il 6
+      covers: 13
+      precision: 1.0
+    - cue: il7
+      covers: 3
+      precision: 1.0
+    - cue: induced il
+      covers: 24
+      precision: 1.0
+    - cue: induced il5
+      covers: 2
+      precision: 1.0
+    - cue: induced il6
+      covers: 2
+      precision: 1.0
+    - cue: alpha induced protein
+      covers: 4
+      precision: 1.0
+    exclude:
+    - cue: induced musculoskeletal syndrome
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: steroid induced osteonecrosis
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: leukemia cell differentiation
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 1
+    - cue: seroconversion induced
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: insulin induced gene
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: hepatitis c induced
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Autoimmune and Inflammatory Diseases:
+    definition: Systemic autoimmune/inflammatory disease (lupus, RA-as-autoimmune, MS, etc.).
+    n_frozen_members: 283
+    n_covered_by_cues: 275
+    cues:
+    - cue: type 1
+      covers: 57
+      precision: 0.8
+    - cue: arthritis
+      covers: 55
+      precision: 0.83
+    - cue: sclerosis
+      covers: 46
+      precision: 0.81
+    - cue: lupus
+      covers: 27
+      precision: 1.0
+    - cue: psoriasis
+      covers: 21
+      precision: 1.0
+    - cue: autoimmune
+      covers: 21
+      precision: 1.0
+    - cue: atopic dermatitis
+      covers: 10
+      precision: 1.0
+    - cue: thyroiditis
+      covers: 11
+      precision: 1.0
+    - cue: glomerulonephritis
+      covers: 9
+      precision: 1.0
+    - cue: vasculitis
+      covers: 7
+      precision: 1.0
+    - cue: vitiligo
+      covers: 6
+      precision: 1.0
+    - cue: ankylosing spondylitis
+      covers: 6
+      precision: 1.0
+    - cue: graves disease
+      covers: 7
+      precision: 1.0
+    - cue: myasthenia gravis
+      covers: 4
+      precision: 1.0
+    - cue: ra level
+      covers: 3
+      precision: 1.0
+    exclude:
+    - cue: lateral sclerosis
+      removes_collisions: 10
+      removes_members: 1
+      removes_other_extras: 0
+    - cue: receptor type 1
+      removes_collisions: 7
+      removes_members: 0
+      removes_other_extras: 6
+    - cue: juvenile idiopathic
+      removes_collisions: 6
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: type 1 levels
+      removes_collisions: 4
+      removes_members: 0
+      removes_other_extras: 12
+  Infectious Disease - Bacterial and Parasitic:
+    definition: Bacterial/parasitic infection traits (TB, malaria, sepsis).
+    n_frozen_members: 255
+    n_covered_by_cues: 248
+    cues:
+    - cue: staphylococcus
+      covers: 90
+      precision: 1.0
+    - cue: streptococcus
+      covers: 63
+      precision: 1.0
+    - cue: tuberculosis
+      covers: 22
+      precision: 1.0
+    - cue: clostridium
+      covers: 21
+      precision: 1.0
+    - cue: pneumonia
+      covers: 16
+      precision: 1.0
+    - cue: sepsis
+      covers: 15
+      precision: 1.0
+    - cue: tripanosoma cruzi seropositivity
+      covers: 7
+      precision: 1.0
+    - cue: meningitis
+      covers: 8
+      precision: 1.0
+    - cue: malaria
+      covers: 5
+      precision: 1.0
+    - cue: leprosy
+      covers: 3
+      precision: 1.0
+  Infectious Disease - Viral:
+    definition: Viral infection susceptibility/response (HIV, HBV, HCV, COVID, etc.).
+    n_frozen_members: 294
+    n_covered_by_cues: 291
+    cues:
+    - cue: covid 19
+      covers: 100
+      precision: 1.0
+    - cue: virus
+      covers: 83
+      precision: 0.71
+    - cue: hiv
+      covers: 49
+      precision: 1.0
+    - cue: influenza
+      covers: 25
+      precision: 1.0
+    - cue: cytomegalovirus
+      covers: 13
+      precision: 1.0
+    - cue: hepatitis b
+      covers: 18
+      precision: 1.0
+    - cue: hepatitis c
+      covers: 13
+      precision: 1.0
+    - cue: herpes
+      covers: 11
+      precision: 1.0
+    - cue: hcv
+      covers: 1
+      precision: 1.0
+    - cue: sars cov 2
+      covers: 1
+      precision: 1.0
+    exclude:
+    - cue: virus cellular receptor
+      removes_collisions: 11
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: seropositivity for norwalk
+      removes_collisions: 5
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: human papilloma virus
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 2
+    - cue: rubella virus
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: antigen 1 igg
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: staphylococcus aureus infection
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: infection response interaction
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: seropositivity for japanese
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: varicella zoster virus
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: bacterial infection
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Infectious Disease - Immune Response and Susceptibility:
+    definition: Generic infection susceptibility / immune response to pathogens.
+    n_frozen_members: 555
+    n_covered_by_cues: 552
+    cues:
+    - cue: seropositivity
+      covers: 552
+      precision: 1.0
+  Cancer - Solid Tumors:
+    definition: Site-specific solid tumors (lung, colorectal, etc.).
+    n_frozen_members: 293
+    n_covered_by_cues: 280
+    cues:
+    - cue: colorectal
+      covers: 92
+      precision: 1.0
+    - cue: melanoma
+      covers: 46
+      precision: 0.98
+    - cue: lung cancer
+      covers: 31
+      precision: 1.0
+    - cue: glioma
+      covers: 16
+      precision: 1.0
+    - cue: colon cancer
+      covers: 15
+      precision: 1.0
+    - cue: hepatocellular carcinoma
+      covers: 12
+      precision: 1.0
+    - cue: bladder cancer
+      covers: 11
+      precision: 1.0
+    - cue: gastric cancer
+      covers: 12
+      precision: 1.0
+    - cue: lung adenocarcinoma
+      covers: 6
+      precision: 1.0
+    - cue: head and neck
+      covers: 6
+      precision: 1.0
+    - cue: thyroid cancer
+      covers: 5
+      precision: 1.0
+    - cue: oropharyngeal
+      covers: 5
+      precision: 1.0
+    - cue: cell lung
+      covers: 15
+      precision: 1.0
+    - cue: pancreatic cancer
+      covers: 4
+      precision: 1.0
+    - cue: astrocytoma
+      covers: 5
+      precision: 1.0
+    - cue: basal cell carcinoma
+      covers: 3
+      precision: 1.0
+    - cue: renal cell carcinoma
+      covers: 3
+      precision: 1.0
+    - cue: esophageal cancer
+      covers: 4
+      precision: 1.0
+    - cue: brain tumor
+      covers: 3
+      precision: 1.0
+  Cancer - Hormone-Dependent:
+    definition: Breast, prostate, endometrial, ovarian cancers.
+    n_frozen_members: 205
+    n_covered_by_cues: 204
+    cues:
+    - cue: breast cancer
+      covers: 108
+      precision: 1.0
+    - cue: ovarian cancer
+      covers: 40
+      precision: 1.0
+    - cue: prostate
+      covers: 34
+      precision: 0.89
+    - cue: endometrial cancer
+      covers: 16
+      precision: 1.0
+    - cue: cervical cancer
+      covers: 7
+      precision: 1.0
+    - cue: testicular cancer
+      covers: 3
+      precision: 1.0
+    exclude:
+    - cue: prostate benign prostatic
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: neoplasm of prostate
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Cancer - Hematological:
+    definition: Leukemia, lymphoma, myeloma.
+    n_frozen_members: 119
+    n_covered_by_cues: 118
+    cues:
+    - cue: leukemia
+      covers: 59
+      precision: 1.0
+    - cue: lymphoma
+      covers: 39
+      precision: 1.0
+    - cue: acute lymphoblastic leukaemia
+      covers: 17
+      precision: 1.0
+    - cue: multiple myeloma
+      covers: 10
+      precision: 0.91
+  Cancer - General Risk and Pleiotropy:
+    definition: Pan-cancer risk, cross-cancer pleiotropy.
+    n_frozen_members: 349
+    n_covered_by_cues: 346
+    cues:
+    - cue: tumor
+      covers: 148
+      precision: 1.0
+    - cue: neoplasm
+      covers: 56
+      precision: 1.0
+    - cue: carcinoma
+      covers: 50
+      precision: 1.0
+    - cue: cancer pleiotropy
+      covers: 47
+      precision: 1.0
+    - cue: metastasis
+      covers: 22
+      precision: 1.0
+    - cue: malignant
+      covers: 40
+      precision: 1.0
+    - cue: secondary malignancy
+      covers: 4
+      precision: 1.0
+    - cue: cancer or hospitalized
+      covers: 3
+      precision: 1.0
+    - cue: cancer or critical
+      covers: 3
+      precision: 1.0
+  Neuropsychiatric - Cognitive Function and Intelligence:
+    definition: Cognition, intelligence, educational attainment, memory.
+    n_frozen_members: 155
+    n_covered_by_cues: 140
+    cues:
+    - cue: performance
+      covers: 30
+      precision: 0.97
+    - cue: attainment
+      covers: 23
+      precision: 1.0
+    - cue: cognitive function
+      covers: 18
+      precision: 1.0
+    - cue: intelligence
+      covers: 15
+      precision: 1.0
+    - cue: recall
+      covers: 15
+      precision: 0.88
+    - cue: executive function
+      covers: 11
+      precision: 1.0
+    - cue: reaction time
+      covers: 7
+      precision: 1.0
+    - cue: education
+      covers: 16
+      precision: 1.0
+    - cue: math
+      covers: 6
+      precision: 0.75
+    - cue: word reading
+      covers: 4
+      precision: 1.0
+    - cue: short term memory
+      covers: 4
+      precision: 1.0
+    - cue: baseline memory
+      covers: 3
+      precision: 1.0
+    - cue: memory decline
+      covers: 3
+      precision: 1.0
+    - cue: memory loss
+      covers: 3
+      precision: 1.0
+    - cue: scores
+      covers: 7
+      precision: 0.78
+    exclude:
+    - cue: obsessive compulsive disorder
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: conditioned on self
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Neuropsychiatric - Psychiatric Disorders:
+    definition: Depression, schizophrenia, bipolar, anxiety, OCD, etc.
+    n_frozen_members: 511
+    n_covered_by_cues: 501
+    cues:
+    - cue: schizophrenia
+      covers: 106
+      precision: 1.0
+    - cue: depressive
+      covers: 103
+      precision: 0.99
+    - cue: depression
+      covers: 62
+      precision: 1.0
+    - cue: bipolar
+      covers: 75
+      precision: 1.0
+    - cue: attention deficit
+      covers: 70
+      precision: 1.0
+    - cue: anxiety
+      covers: 39
+      precision: 1.0
+    - cue: obsessive compulsive
+      covers: 40
+      precision: 1.0
+    - cue: psychosis
+      covers: 17
+      precision: 1.0
+    - cue: nervosa
+      covers: 44
+      precision: 1.0
+    - cue: alcohol use disorder
+      covers: 15
+      precision: 1.0
+    - cue: traumatic stress disorder
+      covers: 13
+      precision: 1.0
+    - cue: autism
+      covers: 28
+      precision: 1.0
+    - cue: alcohol misuse
+      covers: 7
+      precision: 1.0
+    - cue: addiction
+      covers: 7
+      precision: 1.0
+    - cue: alcoholism
+      covers: 6
+      precision: 1.0
+    - cue: adhd
+      covers: 11
+      precision: 1.0
+  Neuropsychiatric - Neurodegenerative Diseases:
+    definition: Alzheimer's, Parkinson's, ALS, dementia.
+    n_frozen_members: 262
+    n_covered_by_cues: 259
+    cues:
+    - cue: s disease
+      covers: 141
+      precision: 0.83
+    - cue: sclerosis
+      covers: 47
+      precision: 0.82
+    - cue: dementia
+      covers: 58
+      precision: 1.0
+    - cue: cognitive impairment
+      covers: 18
+      precision: 1.0
+    - cue: alzheimer disease
+      covers: 8
+      precision: 1.0
+    - cue: parkinson disease
+      covers: 6
+      precision: 1.0
+    exclude:
+    - cue: crohn s disease
+      removes_collisions: 25
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: systemic sclerosis
+      removes_collisions: 8
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: behcet s disease
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 7
+    - cue: hodgkin
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Neuropsychiatric - Neurological Sleep and Behavior:
+    definition: Sleep traits, chronotype, migraine, epilepsy, neuro-behavioral.
+    n_frozen_members: 182
+    n_covered_by_cues: 176
+    cues:
+    - cue: migraine
+      covers: 45
+      precision: 1.0
+    - cue: sleep
+      covers: 39
+      precision: 0.89
+    - cue: neuroticism
+      covers: 20
+      precision: 1.0
+    - cue: headache
+      covers: 16
+      precision: 1.0
+    - cue: insomnia
+      covers: 18
+      precision: 1.0
+    - cue: chronotype
+      covers: 10
+      precision: 1.0
+    - cue: tinnitus
+      covers: 8
+      precision: 1.0
+    - cue: subjective wellbeing
+      covers: 7
+      precision: 1.0
+    - cue: narcolepsy
+      covers: 6
+      precision: 1.0
+    - cue: loneliness
+      covers: 6
+      precision: 1.0
+    - cue: vertigo
+      covers: 4
+      precision: 1.0
+    - cue: worry
+      covers: 5
+      precision: 1.0
+    exclude:
+    - cue: sleep efficiency
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Liver - Disease:
+    definition: Liver disease (NAFLD, cirrhosis, hepatitis-as-liver-disease).
+    n_frozen_members: 88
+    n_covered_by_cues: 88
+    cues:
+    - cue: hepatitis
+      covers: 54
+      precision: 1.0
+    - cue: fatty liver
+      covers: 18
+      precision: 1.0
+    - cue: cirrhosis
+      covers: 15
+      precision: 1.0
+    - cue: liver fibrosis
+      covers: 8
+      precision: 1.0
+  Liver - Function and Enzymes:
+    definition: Liver enzymes/markers (ALT, AST, GGT, bilirubin).
+    n_frozen_members: 253
+    n_covered_by_cues: 250
+    cues:
+    - cue: liver
+      covers: 101
+      precision: 1.0
+    - cue: bilirubin
+      covers: 59
+      precision: 1.0
+    - cue: aminotransferase
+      covers: 29
+      precision: 0.88
+    - cue: gamma glutamyl
+      covers: 22
+      precision: 1.0
+    - cue: albumin
+      covers: 20
+      precision: 1.0
+    - cue: alkaline phosphatase
+      covers: 17
+      precision: 1.0
+    - cue: hepatic
+      covers: 7
+      precision: 1.0
+    exclude:
+    - cue: phosphate aminotransferase isomerizing
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+  Kidney - Disease:
+    definition: Kidney disease (CKD, ESRD, nephropathy, glomerular disease).
+    n_frozen_members: 2032
+    n_covered_by_cues: 2005
+    cues:
+    - cue: kidney
+      covers: 1992
+      precision: 0.99
+    - cue: nephropathy
+      covers: 13
+      precision: 1.0
+    exclude:
+    - cue: acute kidney injury
+      removes_collisions: 4
+      removes_members: 0
+      removes_other_extras: 6
+    - cue: adjustment
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: immunoglobulin light chain
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: early diabetic kidney
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: kidney disease early
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: stage kidney disease
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 1
+    - cue: neoplasm of kidney
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: takes medication
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: diabetes esrd
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Kidney - Function:
+    definition: eGFR, creatinine, cystatin, urinary markers.
+    n_frozen_members: 177
+    n_covered_by_cues: 175
+    cues:
+    - cue: creatinine
+      covers: 60
+      precision: 1.0
+    - cue: cystatin
+      covers: 47
+      precision: 1.0
+    - cue: glomerular
+      covers: 36
+      precision: 1.0
+    - cue: urate
+      covers: 19
+      precision: 1.0
+    - cue: urea
+      covers: 15
+      precision: 1.0
+    - cue: uric acid
+      covers: 13
+      precision: 1.0
+    - cue: renal function
+      covers: 7
+      precision: 1.0
+  Respiratory - Asthma and Allergic Airways:
+    definition: Asthma and allergic airway disease.
+    n_frozen_members: 98
+    n_covered_by_cues: 98
+    cues:
+    - cue: asthma
+      covers: 98
+      precision: 1.0
+  Respiratory - COPD and Chronic Lung Disease:
+    definition: COPD, emphysema, chronic bronchitis.
+    n_frozen_members: 73
+    n_covered_by_cues: 73
+    cues:
+    - cue: obstructive
+      covers: 50
+      precision: 0.7
+    - cue: emphysema
+      covers: 15
+      precision: 1.0
+    - cue: chronic bronchitis
+      covers: 9
+      precision: 1.0
+    - cue: copd
+      covers: 8
+      precision: 1.0
+    exclude:
+    - cue: obstructive sleep apnea
+      removes_collisions: 18
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: ventricular obstructive tract
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Respiratory - Lung Function:
+    definition: Spirometry (FEV1, FVC, PEF) and lung function.
+    n_frozen_members: 85
+    n_covered_by_cues: 81
+    cues:
+    - cue: fev1
+      covers: 47
+      precision: 1.0
+    - cue: forced
+      covers: 27
+      precision: 1.0
+    - cue: fvc
+      covers: 34
+      precision: 1.0
+  Respiratory - Other Respiratory Conditions:
+    definition: Other respiratory (fibrosis, sarcoidosis, sleep-disordered breathing-as-respiratory).
+    n_frozen_members: 124
+    n_covered_by_cues: 124
+    cues:
+    - cue: pulmonary
+      covers: 99
+      precision: 1.0
+    - cue: pneumonia
+      covers: 16
+      precision: 1.0
+    - cue: sarcoidosis
+      covers: 9
+      precision: 1.0
+  Gastrointestinal - Inflammatory Bowel Disease:
+    definition: Crohn's, ulcerative colitis, IBD.
+    n_frozen_members: 65
+    n_covered_by_cues: 63
+    cues:
+    - cue: inflammatory bowel disease
+      covers: 30
+      precision: 1.0
+    - cue: crohn s disease
+      covers: 25
+      precision: 1.0
+    - cue: ulcerative colitis
+      covers: 12
+      precision: 1.0
+    exclude:
+    - cue: pelvic inflammatory disease
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: non
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 3
+  Gastrointestinal - Celiac Disease and Malabsorption:
+    definition: Celiac disease, malabsorption.
+    n_frozen_members: 8
+    n_covered_by_cues: 7
+    cues:
+    - cue: celiac disease
+      covers: 7
+      precision: 1.0
+  Gastrointestinal - Other GI Disorders:
+    definition: Other GI (GERD, IBS, peptic ulcer, diverticular).
+    n_frozen_members: 110
+    n_covered_by_cues: 104
+    cues:
+    - cue: irritable bowel
+      covers: 21
+      precision: 1.0
+    - cue: cholelithiasis
+      covers: 9
+      precision: 1.0
+    - cue: pancreatitis
+      covers: 9
+      precision: 1.0
+    - cue: gastritis
+      covers: 9
+      precision: 1.0
+    - cue: diarrhea
+      covers: 8
+      precision: 1.0
+    - cue: diverticulosis
+      covers: 4
+      precision: 1.0
+    - cue: diarrhoea
+      covers: 4
+      precision: 1.0
+    - cue: inguinal hernia
+      covers: 3
+      precision: 1.0
+    - cue: constipation
+      covers: 3
+      precision: 1.0
+    - cue: peptic ulcer
+      covers: 7
+      precision: 1.0
+    - cue: gastric ulcer
+      covers: 3
+      precision: 1.0
+    - cue: gastroesophageal reflux
+      covers: 15
+      precision: 1.0
+    - cue: acid reflux
+      covers: 2
+      precision: 1.0
+    exclude:
+    - cue: reflux disease pleiotropy
+      removes_collisions: 3
+      removes_members: 0
+      removes_other_extras: 0
+    - cue: neuropathy
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Ophthalmology - Eye Disease and Vision:
+    definition: Eye disease, refractive error, vision.
+    n_frozen_members: 397
+    n_covered_by_cues: 392
+    cues:
+    - cue: retinal
+      covers: 263
+      precision: 1.0
+    - cue: macular degeneration
+      covers: 30
+      precision: 1.0
+    - cue: glaucoma
+      covers: 25
+      precision: 1.0
+    - cue: corneal
+      covers: 24
+      precision: 1.0
+    - cue: retinopathy
+      covers: 17
+      precision: 1.0
+    - cue: myopia
+      covers: 11
+      precision: 1.0
+    - cue: cataract
+      covers: 10
+      precision: 1.0
+    - cue: intraocular pressure
+      covers: 11
+      precision: 1.0
+    - cue: blindness
+      covers: 5
+      precision: 1.0
+    - cue: astigmatism
+      covers: 4
+      precision: 1.0
+  Dental and Oral Health:
+    definition: Teeth, periodontal, oral health.
+    n_frozen_members: 84
+    n_covered_by_cues: 84
+    cues:
+    - cue: tooth
+      covers: 34
+      precision: 1.0
+    - cue: cleft
+      covers: 26
+      precision: 1.0
+    - cue: dental
+      covers: 19
+      precision: 1.0
+    - cue: caries
+      covers: 17
+      precision: 1.0
+    - cue: teeth
+      covers: 12
+      precision: 1.0
+  Musculoskeletal - Arthritis and Connective Tissue:
+    definition: Osteoarthritis, RA-as-joint-disease, connective tissue.
+    n_frozen_members: 185
+    n_covered_by_cues: 181
+    cues:
+    - cue: arthritis
+      covers: 66
+      precision: 1.0
+    - cue: osteoarthritis
+      covers: 44
+      precision: 1.0
+    - cue: lupus
+      covers: 27
+      precision: 1.0
+    - cue: gout
+      covers: 15
+      precision: 1.0
+    - cue: grip strength
+      covers: 13
+      precision: 1.0
+    - cue: ankylosing spondylitis
+      covers: 6
+      precision: 1.0
+    - cue: scoliosis
+      covers: 6
+      precision: 1.0
+    - cue: back pain
+      covers: 3
+      precision: 1.0
+    - cue: muscular
+      covers: 3
+      precision: 1.0
+  Dermatology - Skin Conditions and Pigmentation:
+    definition: Skin disease, pigmentation, hair, nails.
+    n_frozen_members: 125
+    n_covered_by_cues: 121
+    cues:
+    - cue: hair
+      covers: 29
+      precision: 1.0
+    - cue: dermatitis
+      covers: 21
+      precision: 1.0
+    - cue: psoriasis
+      covers: 21
+      precision: 1.0
+    - cue: color
+      covers: 25
+      precision: 0.96
+    - cue: eczema
+      covers: 16
+      precision: 1.0
+    - cue: skin colour
+      covers: 8
+      precision: 1.0
+    - cue: pigmentation
+      covers: 7
+      precision: 1.0
+    - cue: vitiligo
+      covers: 6
+      precision: 1.0
+    - cue: alopecia
+      covers: 5
+      precision: 1.0
+    - cue: acne
+      covers: 4
+      precision: 1.0
+  Sensory - Hearing:
+    definition: Hearing, hearing loss/impairment, hearing aids, tinnitus, auditory function.
+    n_frozen_members: 46
+    n_covered_by_cues: 46
+    cues:
+    - cue: hearing
+      covers: 38
+      precision: 0.93
+    - cue: tinnitus
+      covers: 8
+      precision: 1.0
+  Sensory - Taste and Smell:
+    definition: 'Chemosensory perception: taste (sweet/bitter/sour/salty/umami) and olfaction/smell.'
+    n_frozen_members: 7
+    n_covered_by_cues: 0
+    cues: []
+  Reproductive - Sex Hormones and Fertility:
+    definition: Sex hormones, menarche/menopause, fertility, pregnancy traits.
+    n_frozen_members: 317
+    n_covered_by_cues: 312
+    cues:
+    - cue: pregnancy
+      covers: 83
+      precision: 1.0
+    - cue: gestational
+      covers: 31
+      precision: 1.0
+    - cue: estrogen
+      covers: 26
+      precision: 1.0
+    - cue: polycystic ovary syndrome
+      covers: 17
+      precision: 1.0
+    - cue: birth
+      covers: 23
+      precision: 0.96
+    - cue: infertility
+      covers: 15
+      precision: 1.0
+    - cue: dhea
+      covers: 14
+      precision: 1.0
+    - cue: preeclampsia
+      covers: 15
+      precision: 1.0
+    - cue: sex hormone
+      covers: 13
+      precision: 1.0
+    - cue: testosterone
+      covers: 12
+      precision: 1.0
+    - cue: uterine
+      covers: 11
+      precision: 0.79
+    - cue: estradiol
+      covers: 11
+      precision: 1.0
+    - cue: endometriosis
+      covers: 10
+      precision: 1.0
+    - cue: progesterone
+      covers: 10
+      precision: 1.0
+    - cue: menarche
+      covers: 9
+      precision: 1.0
+    - cue: benign prostatic hyperplasia
+      covers: 6
+      precision: 1.0
+    - cue: menopause
+      covers: 7
+      precision: 1.0
+    - cue: human chorionic gonadotropin
+      covers: 4
+      precision: 1.0
+    - cue: erectile dysfunction
+      covers: 4
+      precision: 1.0
+    - cue: shbg
+      covers: 5
+      precision: 1.0
+    - cue: pelvic
+      covers: 4
+      precision: 0.8
+    - cue: miscarriage
+      covers: 3
+      precision: 1.0
+    exclude:
+    - cue: neoplasm
+      removes_collisions: 2
+      removes_members: 0
+      removes_other_extras: 0
+  Allergy and Hypersensitivity:
+    definition: Allergy, atopy, hypersensitivity, IgE-mediated.
+    n_frozen_members: 60
+    n_covered_by_cues: 57
+    cues:
+    - cue: allergic
+      covers: 20
+      precision: 1.0
+    - cue: allergy
+      covers: 19
+      precision: 0.95
+    - cue: atopic
+      covers: 13
+      precision: 1.0
+    - cue: allergen component sensitization
+      covers: 4
+      precision: 1.0
+    - cue: hay fever
+      covers: 6
+      precision: 1.0
+  Behavioral - Substance Use:
+    definition: Smoking, alcohol, drug use.
+    n_frozen_members: 56
+    n_covered_by_cues: 53
+    cues:
+    - cue: alcohol consumption
+      covers: 30
+      precision: 1.0
+    - cue: smoking initiation
+      covers: 9
+      precision: 1.0
+    - cue: cigarettes per day
+      covers: 6
+      precision: 1.0
+    - cue: alcohol use frequency
+      covers: 4
+      precision: 1.0
+    - cue: smoking cessation
+      covers: 4
+      precision: 1.0
+  Behavioral - Risk-Taking and Social:
+    definition: Risk tolerance, sociability, personality-behavioral.
+    n_frozen_members: 18
+    n_covered_by_cues: 17
+    cues:
+    - cue: risk taking
+      covers: 6
+      precision: 1.0
+    - cue: loneliness
+      covers: 6
+      precision: 1.0
+    - cue: impulsivity
+      covers: 5
+      precision: 1.0
+  Lifestyle - Physical Activity and Diet:
+    definition: Physical activity, diet/food intake, exercise behavior.
+    n_frozen_members: 87
+    n_covered_by_cues: 82
+    cues:
+    - cue: physical activity
+      covers: 35
+      precision: 1.0
+    - cue: exercise
+      covers: 12
+      precision: 1.0
+    - cue: social
+      covers: 12
+      precision: 0.75
+    - cue: income
+      covers: 8
+      precision: 1.0
+    - cue: occupational score
+      covers: 6
+      precision: 1.0
+    - cue: sedentary
+      covers: 5
+      precision: 1.0
+    - cue: cardiorespiratory fitness
+      covers: 4
+      precision: 1.0
+    exclude:
+    - cue: revised social anhedonia
+      removes_collisions: 4
+      removes_members: 0
+      removes_other_extras: 0
+  Pain - Chronic Pain Conditions:
+    definition: Chronic/site-specific pain phenotypes.
+    n_frozen_members: 52
+    n_covered_by_cues: 52
+    cues:
+    - cue: pain
+      covers: 52
+      precision: 1.0
+  Pharmacogenomics - Drug Response:
+    definition: Drug response, medication use, adverse drug events, treatment resistance.
+    n_frozen_members: 153
+    n_covered_by_cues: 130
+    cues:
+    - cue: takes medication
+      covers: 42
+      precision: 1.0
+    - cue: treatment or medication
+      covers: 25
+      precision: 1.0
+    - cue: warfarin
+      covers: 13
+      precision: 1.0
+    - cue: statin
+      covers: 13
+      precision: 1.0
+    - cue: adverse
+      covers: 9
+      precision: 1.0
+    - cue: antidepressant
+      covers: 8
+      precision: 1.0
+    - cue: drug response ic50
+      covers: 4
+      precision: 1.0
+    - cue: agents
+      covers: 5
+      precision: 0.83
+    - cue: medication use drugs
+      covers: 3
+      precision: 1.0
+    - cue: number of purchases
+      covers: 3
+      precision: 1.0
+    - cue: hypersensitivity
+      covers: 3
+      precision: 1.0
+    - cue: preparations
+      covers: 3
+      precision: 1.0
+  Vitamins and Micronutrients:
+    definition: Vitamin and mineral/trace element levels.
+    n_frozen_members: 637
+    n_covered_by_cues: 629
+    cues:
+    - cue: phosphate
+      covers: 117
+      precision: 1.0
+    - cue: calcium
+      covers: 91
+      precision: 1.0
+    - cue: zinc
+      covers: 76
+      precision: 1.0
+    - cue: iron
+      covers: 59
+      precision: 1.0
+    - cue: sodium
+      covers: 49
+      precision: 1.0
+    - cue: vitamin
+      covers: 37
+      precision: 0.97
+    - cue: transferrin
+      covers: 35
+      precision: 1.0
+    - cue: potassium
+      covers: 46
+      precision: 1.0
+    - cue: retinol
+      covers: 23
+      precision: 1.0
+    - cue: magnesium
+      covers: 17
+      precision: 1.0
+    - cue: chloride
+      covers: 26
+      precision: 1.0
+    - cue: copper
+      covers: 14
+      precision: 1.0
+    - cue: folate
+      covers: 15
+      precision: 1.0
+    - cue: 25 hydroxyvitamin d
+      covers: 13
+      precision: 1.0
+    - cue: ferritin
+      covers: 14
+      precision: 1.0
+    - cue: parathyroid hormone
+      covers: 8
+      precision: 1.0
+    - cue: selenium
+      covers: 8
+      precision: 1.0
+    - cue: ascorbic acid
+      covers: 6
+      precision: 1.0
+    - cue: tocopherol
+      covers: 6
+      precision: 1.0
+    - cue: bicarbonate
+      covers: 5
+      precision: 1.0

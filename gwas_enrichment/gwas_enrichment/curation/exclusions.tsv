@@ -1,0 +1,194 @@
+trait	category	reason
+Adult onset asthma and/or waist-to-hip ratio adjusted for BMI	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Alzheimer's disease or waist-hip ratio (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Arm fat ratio or breast cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Arm fat ratio or colorectal cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Arm fat ratio or endometrial cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Arm fat ratio or ovarian cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Body mass index or hip osteoarthritis (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Fat distribution (HIV)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+LDL peak particle diameter (total fat intake interaction)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Leg fat ratio or breast cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Leg fat ratio or colorectal cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Leg fat ratio or endometrial cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Leg fat ratio or ovarian cancer (pleiotropy)	Anthropometry - Body Composition and Fat Distribution	keyword match; trait belongs to a different category
+Arthritis	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Arthritis in Behcet's disease	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Calcium/calmodulin-dependent protein kinase type 1 protein level	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+End-stage renal disease in Type 1 diabetics	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+ICD10 M13: Other arthritis	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Nodular sclerosis Hodgkin lymphoma	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Pyogenic arthritis (PheCode 711.1)	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Takes medication for other arthritis?	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Type 1 narcolepsy	Autoimmune and Inflammatory Diseases	keyword match; trait belongs to a different category
+Benign neoplasm of bone and articular cartilage (PheCode 213)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Bone erosion in rheumatoid arthritis	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Bone mineral accretion in asthma (oral corticosteroid dose interaction)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Bone morphogenetic protein 10 level in Chronic kidney disease with hypertension and no diabetes (3587_53)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Femoral neck bone geometry and menarche (age at onset)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Medication use (drugs affecting bone structure and mineralization)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Secondary malignancy of bone (PheCode 198.6)	Bone - Density and Osteoporosis	keyword match; trait belongs to a different category
+Myosin regulatory light chain 2, atrial isoform level in Chronic kidney disease with hypertension and no diabetes (19296_51)	Cardiovascular - Arrhythmias and Conduction	keyword match; trait belongs to a different category
+Executive inhibition (color interference time) in ADHD	Dermatology - Skin Conditions and Pigmentation	keyword match; trait belongs to a different category
+Virologic severity in Herpes simplex virus type 2 infection	Diabetes - Type 2 Diabetes and Glucose Metabolism	keyword match; trait belongs to a different category
+Inflammatory skin disease	Gastrointestinal - Inflammatory Bowel Disease	keyword match; trait belongs to a different category
+Rheumatoid arthritis and other inflammatory (PheCode 714)	Gastrointestinal - Inflammatory Bowel Disease	keyword match; trait belongs to a different category
+Rheumatoid arthritis and other inflammatory polyarthropathies (PheCode 714)	Gastrointestinal - Inflammatory Bowel Disease	keyword match; trait belongs to a different category
+Systemic seropositive rheumatic diseases (Systemic sclerosis or systemic lupus erythematosus or rheumatoid arthritis or idiopathic inflammatory myopathies)	Gastrointestinal - Inflammatory Bowel Disease	keyword match; trait belongs to a different category
+Corneal ulcer (PheCode 370.1)	Gastrointestinal - Other GI Disorders	keyword match; trait belongs to a different category
+Blood cell traits latent factor 6 (red cell (and basophil))	Hematology - Red Blood Cells and Hemoglobin	keyword match; trait belongs to a different category
+B-cell acute lymphoblastic leukaemia	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+B-cell acute lymphoblastic leukaemia (ETV6-RUNX1 positive)	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+B-cell acute lymphoblastic leukaemia (high-hyperdiploidy)	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+Cytotoxic and regulatory T-cell molecule level in Chronic kidney disease with hypertension and no diabetes (7968_15)	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+Diffuse large B-cell non-Hodgkin lymphoma	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+Malignant T-cell-amplified sequence 1 levels	Hematology - White Blood Cells	keyword match; trait belongs to a different category
+Asthma (toluene diisocyanate-induced)	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+Insomnia (caffeine-induced)	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+M.tuberculosis induced IFN-G level	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+Progesterone-induced-blocking factor 1, Isoform 4 levels	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+Psychosis (methamphetamine induced)	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+Time to levodopa-induced-dyskinesia onset in Parkinson's disease	Immunity - Inflammatory Markers and Cytokines	keyword match; trait belongs to a different category
+Anti-measles virus IgG levels	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Clostridium difficile infection in multiple myeloma	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Diarrhoea-associated Entamoeba histolytica infection	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Recurrence of malaria infection (mild or asymptomatic)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Resistance to Mycobacterium tuberculosis infection	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Seropositivity for chikungunya virus peptide (twist_35894)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Seropositivity for escherichia virus p1 peptide (twist_92719)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Seropositivity for foot-and-mouth disease virus - type o peptide (twist_53579)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Seropositivity for human respiratory syncytial virus peptide (twist_39179)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Streptococcus infection (PheCode 41.2)	Infectious Disease - Viral	keyword match; trait belongs to a different category
+Diabetic kidney disease	Kidney - Disease	keyword match; trait belongs to a different category
+Diabetic kidney disease in type 2 diabetes	Kidney - Disease	keyword match; trait belongs to a different category
+Estimated glomerular filtration rate in coronary artery disease and impaired kidney function	Kidney - Disease	keyword match; trait belongs to a different category
+Kidney cancer	Kidney - Disease	keyword match; trait belongs to a different category
+Kidney disease (late stage) in type 1 diabetes	Kidney - Disease	keyword match; trait belongs to a different category
+Kidney function decline traits	Kidney - Disease	keyword match; trait belongs to a different category
+Late diabetic kidney disease in type 2 diabetes	Kidney - Disease	keyword match; trait belongs to a different category
+Tacrolimus trough level in transplant patients (heart, kidney, lung, and liver)	Kidney - Disease	keyword match; trait belongs to a different category
+Chylomicron and extremely large VLDL particle concentration meal response (OrNLSr)	Lipids - LDL Cholesterol	keyword match; trait belongs to a different category
+Body mass index and cholesterol (psychopharmacological treatment)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol ester levels in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol ester levels in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol ester levels in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol ester levels in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in small LDL meal response (OrNLSr)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol esters in very large HDL meal response (LMM)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in large HDL (UKB data field 23561)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in large LDL (UKB data field 23533)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in medium HDL (UKB data field 23568)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in medium LDL (UKB data field 23540)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in small HDL (UKB data field 23575)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in Small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in small LDL (UKB data field 23547)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol in very large HDL (UKB data field 23554)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol levels in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Large HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in large HDL percentage (UKB data field 23635)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Large LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in large LDL percentage (UKB data field 23615)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Medium HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in medium HDL percentage (UKB data field 23640)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Medium LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in medium LDL percentage (UKB data field 23620)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Small HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in small HDL percentage (UKB data field 23645)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Small LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in small LDL percentage (UKB data field 23625)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to Total Lipids in Very Large HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids in very large HDL percentage (UKB data field 23630)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesterol to total lipids ratio in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in large HDL (UKB data field 23562)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in large LDL (UKB data field 23534)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in medium HDL (UKB data field 23569)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in medium LDL (UKB data field 23541)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in small HDL (UKB data field 23576)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters in Small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in small LDL (UKB data field 23548)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters in very large HDL (UKB data field 23555)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Large HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in large HDL percentage (UKB data field 23636)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Large LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in large LDL percentage (UKB data field 23616)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Medium HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in medium HDL percentage (UKB data field 23641)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Medium LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in medium LDL percentage (UKB data field 23621)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Small HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in small HDL percentage (UKB data field 23646)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Small LDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in small LDL percentage (UKB data field 23626)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl Esters to Total Lipids in Very Large HDL percentage	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids in very large HDL percentage (UKB data field 23631)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Cholesteryl esters to total lipids ratio in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Fasting cholesterol esters in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+LDL cholesterol	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Peripheral artery disease or LDL cholesterol (pleiotropy)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Plasma cholesterol sulfate levels in chronic kidney disease	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in large LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in medium HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in medium LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in small HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in small LDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Postprandial cholesterol esters in very large HDL	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Remnant cholesterol (non-HDL, non-LDL -cholesterol)	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Takes medication for high cholesterol?	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Type 2 diabetes in cholesterol intake above Dietary Reference Intake	Lipids - Total and Other Cholesterol	keyword match; trait belongs to a different category
+Kynurenine/alpha-aminoadipate aminotransferase, mitochondrial level in Chronic kidney disease with hypertension and no diabetes (22023_3)	Liver - Function and Enzymes	keyword match; trait belongs to a different category
+Alcohol use disorder (dependence and problematic use scores)	Neuropsychiatric - Cognitive Function and Intelligence	keyword match; trait belongs to a different category
+ASCVD risk score (Systematic Coronary Risk Evaluation 2-Older People-Lipid scores)	Neuropsychiatric - Cognitive Function and Intelligence	keyword match; trait belongs to a different category
+Psychological wellbeing (social role performance and self-confidence)	Neuropsychiatric - Cognitive Function and Intelligence	keyword match; trait belongs to a different category
+Addison's disease	Neuropsychiatric - Neurodegenerative Diseases	keyword match; trait belongs to a different category
+Depressive symptom (sleep problems) (binary trait)	Neuropsychiatric - Neurological Sleep and Behavior	keyword match; trait belongs to a different category
+REM sleep behavior disorder in Parkinson's disease	Neuropsychiatric - Neurological Sleep and Behavior	keyword match; trait belongs to a different category
+Wake after sleep onset in severe depression	Neuropsychiatric - Neurological Sleep and Behavior	keyword match; trait belongs to a different category
+Severe depressive disorders in coronary artery disease	Neuropsychiatric - Psychiatric Disorders	keyword match; trait belongs to a different category
+Personal history of allergy to medicinal agents (PheCode 977)	Pharmacogenomics - Drug Response	keyword match; trait belongs to a different category
+BMI at birth	Reproductive - Sex Hormones and Fertility	keyword match; trait belongs to a different category
+Pelvic height	Reproductive - Sex Hormones and Fertility	keyword match; trait belongs to a different category
+Uterine cancer	Reproductive - Sex Hormones and Fertility	keyword match; trait belongs to a different category
+Hypertrophic obstructive cardiomyopathy (PheCode 425.11)	Respiratory - COPD and Chronic Lung Disease	keyword match; trait belongs to a different category
+Cleft lip with or without cleft palate (maternal periconceptional vitamin use interaction)	Vitamins and Micronutrients	keyword match; trait belongs to a different category

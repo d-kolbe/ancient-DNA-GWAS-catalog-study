@@ -1,0 +1,15 @@
+# Snakemake >= 8 with the SLURM executor plugin (pip install snakemake-executor-plugin-slurm)
+# Usage: snakemake -s Snakefile_lai.py --profile ../profiles/slurm_lai --configfile config/config_lai.local.yaml
+# Each FLARE job requests 120 GB; adjust `jobs` to what the queue allows.
+executor: slurm
+jobs: 50
+latency-wait: 60
+printshellcmds: true
+use-conda: true
+default-resources:
+  slurm_partition: asterix
+set-resources:
+  extract_batch_chr_vcf:
+    slurm_partition: asterix-long
+  merge_flare_chr_final:
+    slurm_partition: asterix-long

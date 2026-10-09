@@ -1,0 +1,203 @@
+# =============================================================================
+# config_analysis.yaml
+# =============================================================================
+# Paths are relative to the project folder (run Snakemake from there).
+# Site-specific overrides go into config/config_analysis.local.yaml (gitignored).
+
+# Output folder of the main pipeline (config.yaml: output_dir) and plot target
+analysis_output_dir: "results/v8"
+plot_output_dir:     "results/v8/plots"
+
+
+# =============================================================================
+# (enrichment_plot retained for column-name resolution only;
+#  butterfly lollipop removed — volcano is the only category-level output)
+# =============================================================================
+enrichment_plot:
+  col_category:             "category"
+  col_pvalue:               "mannwhitneyu_pval"
+  col_fdr:                  "mannwhitneyu_fdr"
+  col_u_statistic:          ""
+  col_n_category:           "n_blocks"
+  col_n_background:         ""
+  col_effect_size_fallback: "fold_enrichment"
+  fdr_threshold:            0.05
+  top_n_highlighted:        10
+  max_label_length:         55
+  figure_width:             14
+  figure_height_per_row:    0.35
+  min_figure_height:        8
+
+
+# =============================================================================
+# Volcano plot  (Plot 1 — the only category-level output)
+# =============================================================================
+volcano_plot:
+  dot_size_min:         60
+  dot_size_max:        520
+  label_min_neg_logq:   1.0
+  label_size_min:      10.5
+
+
+# =============================================================================
+# Plot 2: Directionality Forest Panel (2x3 grid, light theme only)
+# =============================================================================
+directionality_plot:
+
+  # ---------------------------------------------------------------------------
+  # Column names
+  # ---------------------------------------------------------------------------
+  col_trait:       "trait"
+  col_category:    "category"
+  col_cohens_d:    "cohens_d"
+  col_pvalue:      "ttest_pval"
+  col_n_hg:        "n_WHG_samples"
+  col_n_ef:        "n_EF_samples"
+  col_n_extracted: "n_snps_extracted"
+
+  # ---------------------------------------------------------------------------
+  # Trait / panel selection
+  # ---------------------------------------------------------------------------
+  n_panel_categories:    6
+  n_panel_traits:       10
+  min_snps_extracted:   20
+  exclude_traits:
+    - "IBD_combined"
+
+  # Explicit panel order (used by both forest and chord plots so they match).
+  # Leave empty [] to auto-sort by trait count descending instead.
+  panel_order:
+    - "Neuropsychiatric - Psychiatric Disorders"
+    - "Neuropsychiatric - Neurological Sleep and Behavior"
+    - "Lipids - Fatty Acids"
+    - "Anthropometry - Body Composition and Fat Distribution"
+    - "Sensory - Hearing"
+    - "Gastrointestinal - Inflammatory Bowel Disease"
+
+  # ---------------------------------------------------------------------------
+  # Statistics
+  # ---------------------------------------------------------------------------
+  ci_level:        0.95
+  sig_threshold:   0.05
+
+  # ---------------------------------------------------------------------------
+  # Figure
+  # ---------------------------------------------------------------------------
+  panel_figure_width:   8.0
+  panel_figure_height:  18.0
+  max_label_length:     50
+
+  # ---------------------------------------------------------------------------
+  # Sensitivity analysis (excludes top SNPs)
+  # Path relative to analysis_output_dir; leave blank to plot main estimate only.
+  # (file name must match sensitivity.exclude_top_n of the main config)
+  # ---------------------------------------------------------------------------
+  sensitivity_directionality_file: "directionality_sensitivity/trait_directionality_summary_excl3.txt"
+  sensitivity_y_offset:   0.18   # vertical offset between main and sensitivity dots
+
+  # ---------------------------------------------------------------------------
+  # Bootstrap CI + leave-one-out figure
+  # Paths relative to analysis_output_dir; leave blank to skip.
+  # ---------------------------------------------------------------------------
+  bootstrap_ci_file: "directionality_bootstrap/bootstrap_ci.txt"
+  bootstrap_y_offset: 0.18   # vertical offset between bootstrap CI and LOO dots
+  loo_file: "directionality_bootstrap/snp_leaveoneout.txt"
+  # Leave-one-out: each SNP removed once; most impactful SNP per trait labelled
+
+  # ---------------------------------------------------------------------------
+  # Visual style (legacy keys retained so old scripts don't crash)
+  # ---------------------------------------------------------------------------
+  top_n_traits:          20
+  min_snps_for_plot:     15
+  figure_width:          15
+  figure_height_per_row:  0.65
+  min_figure_height:      8
+  x_pad_fraction:         0.30
+  bar_panel_width_fraction: 0.80
+  fontsize_title:        15
+  fontsize_axis_label:   13
+  fontsize_tick:         11
+  fontsize_row_label:    11
+  fontsize_annotation:    9
+  fontsize_snp_label:     7.0
+  ci_bar_linewidth:       2.0
+  ci_bar_alpha:           0.80
+  row_shading_alpha:      0.45
+  zero_line_linewidth:    1.0
+  zero_line_alpha:        0.55
+  grid_linewidth:         0.5
+  grid_alpha:             0.50
+  legend_frame_alpha:     0.35
+  legend_marker_size_trait: 11
+  legend_marker_size_snp:    8
+  color_hg_higher: "#2166AC"
+  color_ef_higher: "#D6604D"
+  color_neutral:   "#999999"
+
+
+# =============================================================================
+# Plot 2b: SNP Contribution Chord Diagram (2x3 panel, light theme only)
+# =============================================================================
+snp_chord_plot:
+
+  # LD-block chord computation
+  top_snps_per_trait:    500
+  min_shared_blocks:       1
+
+  # Radial SNP tick marks
+  n_snp_ticks:             5
+  max_bar_length:          0.15
+  min_bar_length:          0.00
+
+  # Panel title (category name, top-left of each panel)
+  panel_title_fontsize:    7.0   # pt
+  panel_title_x:          -1.46  # data coords; xlim is +-1.50
+  panel_title_y:           1.60  # data coords; can exceed +-1.50 (clip_on=False)
+
+  # Panel spacing
+  panel_hspace:            0.20
+  panel_wspace:            0.18
+
+  # Trait arc labels
+  max_label_chars:        60
+  trait_label_fontsize:    5.0
+  trait_label_wrap_chars: 20
+
+  # SNP bar tip labels
+  snp_label_fontsize:      3
+
+  # Figure (height auto-computed from width for square panels)
+  figure_width:           10.0
+  figure_height:          16.0   # overridden by auto-computation in script
+
+
+# =============================================================================
+# Plot 3: SNP Overlap Heatmaps  (legacy)
+# =============================================================================
+snp_overlap_plot:
+  col_snp_id:       "snp_id"
+  col_contribution: "pgs_contribution"
+  top_n_traits_per_category:         5
+  cumulative_contribution_threshold: 0.80
+  min_snps_for_overlap:              3
+  figure_width:     12
+  figure_height:    10
+  cmap:             "YlOrRd"
+  annotate_cells:   true
+  annotate_threshold: 0.0
+
+
+# =============================================================================
+# Plot 4: SNP Contribution Manhattan  (legacy)
+# =============================================================================
+snp_contribution_plot:
+  top_n_categories:   10
+  rank_by:            "mannwhitneyu_pval"
+  top_n_traits:       20
+  min_snps_for_plot:  15
+  exclude_traits:
+    - "IBD_combined"
+  top_n_labels:       10
+  min_contribution:   0.0
+  figure_width:       16
+  figure_height:       6

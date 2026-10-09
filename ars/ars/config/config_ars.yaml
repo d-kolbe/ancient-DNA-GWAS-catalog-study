@@ -1,0 +1,90 @@
+# =============================================================================
+# config_ars.yaml -- UKB Ancestry Risk Score (ARS) Pipeline
+# =============================================================================
+# Loaded on top of config/config_lai.yaml (only stable_flare_outputs.dir is used
+# from it: the FLARE output directory). Paths are relative to the project folder
+# (run Snakemake from there). Site-specific overrides go into
+# config/config_ars.local.yaml (gitignored).
+#
+# Run with:
+#   snakemake -s Snakefile_ars.py --configfile config/config_ars.local.yaml --profile ../profiles/slurm
+# =============================================================================
+
+
+# =============================================================================
+# UKB-SPECIFIC SETTINGS
+# =============================================================================
+
+ukb:
+
+  # Directory containing chr{N}.anc.vcf.gz and chr{N}.anc.vcf.gz.csi.
+  # Empty = FLARE output of Snakefile_lai.py (stable_flare_outputs.dir).
+  flare_dir: ""
+
+  # All UKB ARS outputs written here
+  output_dir: "results/ars"
+
+  # Outputs of the gwas_enrichment project (sibling folder)
+  main_pipeline_enrichment:     "../gwas_enrichment/results/v8/enrichment/category_enrichment.txt"
+  main_pipeline_directionality: "../gwas_enrichment/results/v8/directionality/trait_directionality_summary.txt"
+  # Used for the concordance step; leave empty to skip it
+  main_pipeline_bootstrap_ci:   "../gwas_enrichment/results/v8/directionality_bootstrap/bootstrap_ci.txt"
+
+  # Summary file from the main enrichment pipeline listing all traits
+  # and their per-trait SNP files. This drives all trait discovery.
+  # All variant selection is done upstream (per-trait files: chr, pos, effect_allele, beta).
+  snp_sets_summary: "../gwas_enrichment/results/v8/snp_sets/snp_sets_summary.txt"
+
+  # GWAS Catalog (GRCh37), used only to add rsID and gene labels to the variant tables
+  gwas_catalog: "data/gwas_catalog_GRCh37.tsv"
+
+  # Ancestry labels in the ORDER they appear in ANP1/ANP2 comma-separated values.
+  # Verified from FLARE output:
+  #   ANP1=0.28,0.35,0.36 → EF=0.28, ST=0.35, WHG=0.36
+  # Check against the FLARE VCF header (bcftools view -h chr1.anc.vcf.gz | grep -i ancestry).
+  ancestry_names:
+    - "EF"    # index 0 — Early European Farmer
+    - "ST"    # index 1 — Steppe
+    - "WHG"   # index 2 — Western Hunter-Gatherer
+
+  # -------------------------------------------------------------------------
+  # Forest plot settings
+  # -------------------------------------------------------------------------
+  forest_n_cats:        6      # number of category panels (top-N from enrichment)
+  forest_n_traits:      10     # top N traits per panel (ranked by ttest_pval)
+  forest_max_label:     60     # max characters in trait label before truncation
+  forest_ci_level:      0.95   # bootstrap CI level
+  forest_fig_width:     8.0   # figure width in inches
+  forest_fig_height:    null   # figure height in inches; leave null to
+                                # auto-size from the number of rows/traits
+  forest_row_height:    0.32   # inches per trait row, used when auto-sizing
+                                # (ignored if forest_fig_height is set) —
+                                # main knob for "too much/too little space
+                                # per trait"
+  forest_label_fontsize: 5   # font size (pt) for trait labels
+  forest_show_loo:      false  # leave-one-out SNP dot strip below each CI bar.
+                                # OFF by default: per-SNP removal shifts are on a
+                                # different scale than the person-resampling
+                                # std_bootstrap denominator used for the CI, so a
+                                # single large-effect SNP can land dozens of "SD
+                                # units" away and blow up the figure canvas.
+                                # Flip to true once we've settled on a comparable
+                                # scale for LOO.
+  forest_denominator:   "std"  # which uncertainty measure scales the contrast:
+                                #   "std"   = std_bootstrap, now variant-resampled
+                                #             (uncertainty from which SNPs ended
+                                #             up in this trait's GWAS-derived set)
+                                #   "persd" = person_sd, population SD of each
+                                #             individual's own ancestry-weighted
+                                #             contrast (no resampling at all;
+                                #             an effect-size-style measure)
+  forest_exclude_traits:       # traits to exclude from ARS forest plot
+    - "IBD_combined"           # custom combined trait, not in GWAS catalog
+
+  # -------------------------------------------------------------------------
+  # Bootstrap parameters
+  # -------------------------------------------------------------------------
+  bootstrap:
+    n_iterations: 1000   # Bootstrap resamples
+    n_samples:    10000  # Individuals drawn per iteration (with replacement)
+    random_seed:  42

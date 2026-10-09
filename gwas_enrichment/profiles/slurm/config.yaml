@@ -1,0 +1,10 @@
+# Snakemake >= 8 with the SLURM executor plugin (pip install snakemake-executor-plugin-slurm)
+# Usage: snakemake -s Snakefile_<name>.py --profile ../profiles/slurm --configfile config/config.local.yaml
+executor: slurm
+jobs: 50
+latency-wait: 60
+printshellcmds: true
+use-conda: true
+default-resources:
+  slurm_partition: epyx
+  # slurm_account: <account>

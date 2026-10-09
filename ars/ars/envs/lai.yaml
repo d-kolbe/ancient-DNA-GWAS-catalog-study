@@ -1,0 +1,10 @@
+# Environment for Snakefile_lai.py. Versions taken from the environment used
+# for the analysis. FLARE itself (flare.jar) is not a conda package: see the
+# README for the version and download location.
+name: lai
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bcftools=1.21
+  - openjdk=22.0.1

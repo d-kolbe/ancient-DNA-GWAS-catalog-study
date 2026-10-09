@@ -1,0 +1,263 @@
+# What each category means (definition, inclusion cues, collision guards).
+# Written during the June 2026 cleaning round; used to annotate category_cues.yaml.
+
+Anthropometry - Height and Growth:
+  definition: Stature, standing/sitting height, growth rate, peak height velocity, short stature.
+  include: standing height; sitting height; growth; short stature; peak height velocity
+  exclude: craniofacial height (nose/lip/nasal/philtrum/forehead/facial); organ or adipose volumes merely *adjusted for* height
+Anthropometry - Weight and BMI:
+  definition: Body weight, BMI, obesity, weight change.
+  include: BMI; body weight; obesity; weight gain/loss
+  exclude: non-anthropometric traits where BMI is only a covariate/interaction; birth weight if better as reproductive
+Anthropometry - Body Composition and Fat Distribution:
+  definition: Fat mass/percentage, lean mass, WHR, regional adiposity, body composition.
+  include: fat mass; lean mass; waist-hip ratio; visceral/subcutaneous fat; impedance
+  exclude: plain BMI/weight; height
+Aging - Longevity and Healthspan:
+  definition: Lifespan, longevity, healthspan, parental longevity, frailty, epigenetic age.
+  include: longevity; lifespan; healthspan; frailty; parental age at death; aging rate
+  exclude: brain-imaging traits riding the word 'aging' (cortex/ventricular/hippocampal); skin aging (dermatology)
+Lipids - LDL Cholesterol:
+  definition: LDL-C levels and LDL-specific traits.
+  include: LDL cholesterol; LDL particle
+  exclude: HDL; triglycerides; total cholesterol-only
+Lipids - HDL Cholesterol:
+  definition: HDL-C levels and HDL-specific traits.
+  include: HDL cholesterol; HDL particle
+  exclude: LDL; triglycerides
+Lipids - Triglycerides:
+  definition: Triglyceride levels.
+  include: triglyceride
+  exclude: cholesterol fractions
+Lipids - Total and Other Cholesterol:
+  definition: Total cholesterol, non-HDL, remnant cholesterol, ratios not specific to LDL/HDL.
+  include: total cholesterol; non-HDL; cholesterol ratio
+  exclude: traits specifically LDL-only or HDL-only
+Lipids - Lipoproteins:
+  definition: Lipoprotein(a), apolipoproteins, lipoprotein particle traits.
+  include: lipoprotein(a); apolipoprotein; ApoB; ApoA
+  exclude: ''
+Lipids - Phospholipids and Complex Lipids:
+  definition: Phospholipids, sphingolipids, ceramides, complex lipid species.
+  include: phospholipid; sphingomyelin; ceramide; phosphatidyl
+  exclude: simple cholesterol/TG measures
+Lipids - Fatty Acids:
+  definition: Fatty acid levels (saturated, MUFA, PUFA, omega-3/6).
+  include: fatty acid; omega-3; PUFA; oleic; linoleic
+  exclude: ''
+Diabetes - Type 1 Diabetes:
+  definition: Type 1 diabetes and its complications.
+  include: type 1 diabetes; T1D
+  exclude: type 2 diabetes-only traits
+Diabetes - Type 2 Diabetes and Glucose Metabolism:
+  definition: Type 2 diabetes, fasting glucose, HbA1c, glycemic traits.
+  include: type 2 diabetes; fasting glucose; HbA1c; glucose
+  exclude: type-1-diabetes-only traits (belong in T1D)
+Diabetes - Insulin and Insulin Resistance:
+  definition: Insulin levels, insulin resistance/sensitivity, HOMA.
+  include: insulin; HOMA-IR; insulin sensitivity
+  exclude: ''
+Metabolic - Metabolic Syndrome and Complications:
+  definition: Metabolic syndrome cluster and its complications.
+  include: metabolic syndrome
+  exclude: ''
+Metabolic - Hormones:
+  definition: Non-sex, non-thyroid metabolic hormones (leptin, adiponectin, GH, IGF, cortisol).
+  include: leptin; adiponectin; IGF-1; growth hormone; cortisol
+  exclude: sex hormones; thyroid hormones
+Cardiovascular - Coronary Artery Disease and Atherosclerosis:
+  definition: CAD, MI, atherosclerosis, coronary calcification.
+  include: coronary artery disease; myocardial infarction; atherosclerosis; coronary calcium
+  exclude: ''
+Cardiovascular - Blood Pressure and Hypertension:
+  definition: BP traits and hypertension.
+  include: blood pressure; hypertension; systolic; diastolic
+  exclude: ''
+Cardiovascular - Arrhythmias and Conduction:
+  definition: Arrhythmias, AF, QT/PR intervals, conduction.
+  include: atrial fibrillation; arrhythmia; QT interval; conduction
+  exclude: structural heart traits
+Cardiovascular - Cardiac Structure and Function:
+  definition: Cardiac chamber size, ejection fraction, wall thickness, imaging-derived structure.
+  include: ejection fraction; ventricular mass; wall thickness; cardiac MRI
+  exclude: ECG interval/arrhythmia traits
+Cardiovascular - Heart Failure and Cardiomyopathy:
+  definition: Heart failure, cardiomyopathy.
+  include: heart failure; cardiomyopathy
+  exclude: ''
+Cardiovascular - Vascular Disease and Stroke:
+  definition: Stroke, peripheral/cerebral vascular disease, aneurysm.
+  include: stroke; aneurysm; peripheral artery; carotid
+  exclude: ''
+Hematology - Red Blood Cells and Hemoglobin:
+  definition: RBC count, hemoglobin, hematocrit, MCV/MCH.
+  include: hemoglobin; erythrocyte; hematocrit; MCV
+  exclude: ''
+Hematology - White Blood Cells:
+  definition: WBC counts and subsets (neutrophil, lymphocyte, etc.).
+  include: leukocyte; neutrophil; lymphocyte count; monocyte; eosinophil
+  exclude: immune function/cytokine traits
+Hematology - Platelets and Coagulation:
+  definition: Platelet counts/volume, clotting factors, coagulation.
+  include: platelet; coagulation; fibrinogen; thrombin
+  exclude: ''
+Immunity - Inflammatory Markers and Cytokines:
+  definition: CRP, interleukins, cytokines, inflammatory protein levels.
+  include: C-reactive protein; interleukin; cytokine; TNF
+  exclude: WBC counts
+Immunity - Immunoglobulins and Antibodies:
+  definition: Ig levels, antibody titers, IgG glycosylation.
+  include: immunoglobulin; IgG; IgA; antibody titer; N-glycan
+  exclude: ''
+Autoimmune and Inflammatory Diseases:
+  definition: Systemic autoimmune/inflammatory disease (lupus, RA-as-autoimmune, MS, etc.).
+  include: autoimmune; lupus; multiple sclerosis; systemic sclerosis
+  exclude: ''
+Allergy and Hypersensitivity:
+  definition: Allergy, atopy, hypersensitivity, IgE-mediated.
+  include: allergy; atopic; hypersensitivity; IgE
+  exclude: ''
+Infectious Disease - Viral:
+  definition: Viral infection susceptibility/response (HIV, HBV, HCV, COVID, etc.).
+  include: viral; HIV; hepatitis B/C; COVID; influenza
+  exclude: ''
+Infectious Disease - Bacterial and Parasitic:
+  definition: Bacterial/parasitic infection traits (TB, malaria, sepsis).
+  include: tuberculosis; malaria; sepsis; bacterial
+  exclude: ''
+Infectious Disease - Immune Response and Susceptibility:
+  definition: Generic infection susceptibility / immune response to pathogens.
+  include: infection susceptibility; immune response to
+  exclude: ''
+Cancer - General Risk and Pleiotropy:
+  definition: Pan-cancer risk, cross-cancer pleiotropy.
+  include: cancer (pan/overall); cross-cancer
+  exclude: single-site solid tumors better placed in Solid Tumors
+Cancer - Solid Tumors:
+  definition: Site-specific solid tumors (lung, colorectal, etc.).
+  include: carcinoma; specific solid tumor sites
+  exclude: hematological malignancies; hormone-dependent cancers
+Cancer - Hematological:
+  definition: Leukemia, lymphoma, myeloma.
+  include: leukemia; lymphoma; myeloma
+  exclude: ''
+Cancer - Hormone-Dependent:
+  definition: Breast, prostate, endometrial, ovarian cancers.
+  include: breast cancer; prostate cancer; endometrial; ovarian
+  exclude: ''
+Kidney - Disease:
+  definition: Kidney disease (CKD, ESRD, nephropathy, glomerular disease).
+  include: chronic kidney disease; nephropathy; ESRD; glomerul
+  exclude: ''
+Kidney - Function:
+  definition: eGFR, creatinine, cystatin, urinary markers.
+  include: eGFR; creatinine; cystatin C; albuminuria
+  exclude: ''
+Liver - Disease:
+  definition: Liver disease (NAFLD, cirrhosis, hepatitis-as-liver-disease).
+  include: fatty liver; cirrhosis; NAFLD; hepatic steatosis
+  exclude: ''
+Liver - Function and Enzymes:
+  definition: Liver enzymes/markers (ALT, AST, GGT, bilirubin).
+  include: ALT; AST; GGT; bilirubin; alkaline phosphatase
+  exclude: traits merely adjusted for liver volume
+Gastrointestinal - Inflammatory Bowel Disease:
+  definition: Crohn's, ulcerative colitis, IBD.
+  include: Crohn; ulcerative colitis; inflammatory bowel
+  exclude: ''
+Gastrointestinal - Celiac Disease and Malabsorption:
+  definition: Celiac disease, malabsorption.
+  include: celiac; malabsorption
+  exclude: ''
+Gastrointestinal - Other GI Disorders:
+  definition: Other GI (GERD, IBS, peptic ulcer, diverticular).
+  include: GERD; irritable bowel; peptic ulcer; diverticular
+  exclude: ''
+Respiratory - Asthma and Allergic Airways:
+  definition: Asthma and allergic airway disease.
+  include: asthma; allergic rhinitis
+  exclude: COPD
+Respiratory - COPD and Chronic Lung Disease:
+  definition: COPD, emphysema, chronic bronchitis.
+  include: COPD; emphysema; chronic bronchitis
+  exclude: asthma-only
+Respiratory - Lung Function:
+  definition: Spirometry (FEV1, FVC, PEF) and lung function.
+  include: FEV1; FVC; spirometry; lung function
+  exclude: ''
+Respiratory - Other Respiratory Conditions:
+  definition: Other respiratory (fibrosis, sarcoidosis, sleep-disordered breathing-as-respiratory).
+  include: pulmonary fibrosis; sarcoidosis; respiratory
+  exclude: ''
+Neuropsychiatric - Psychiatric Disorders:
+  definition: Depression, schizophrenia, bipolar, anxiety, OCD, etc.
+  include: depression; schizophrenia; bipolar; anxiety; psychiatric
+  exclude: ''
+Neuropsychiatric - Neurodegenerative Diseases:
+  definition: Alzheimer's, Parkinson's, ALS, dementia.
+  include: Alzheimer; Parkinson; dementia; ALS; neurodegener
+  exclude: ''
+Neuropsychiatric - Cognitive Function and Intelligence:
+  definition: Cognition, intelligence, educational attainment, memory.
+  include: cognitive; intelligence; educational attainment; memory
+  exclude: ''
+Neuropsychiatric - Neurological Sleep and Behavior:
+  definition: Sleep traits, chronotype, migraine, epilepsy, neuro-behavioral.
+  include: sleep; chronotype; insomnia; migraine; epilepsy
+  exclude: ''
+Behavioral - Substance Use:
+  definition: Smoking, alcohol, drug use.
+  include: smoking; alcohol; cannabis; nicotine; substance use
+  exclude: ''
+Behavioral - Risk-Taking and Social:
+  definition: Risk tolerance, sociability, personality-behavioral.
+  include: risk-taking; risk tolerance; sociability
+  exclude: ''
+Lifestyle - Physical Activity and Diet:
+  definition: Physical activity, diet/food intake, exercise behavior.
+  include: physical activity; dietary intake; exercise; food intake
+  exclude: ''
+Reproductive - Sex Hormones and Fertility:
+  definition: Sex hormones, menarche/menopause, fertility, pregnancy traits.
+  include: testosterone; estradiol; menarche; menopause; fertility; SHBG
+  exclude: ''
+Bone - Density and Osteoporosis:
+  definition: Bone mineral density, osteoporosis, fracture.
+  include: bone mineral density; osteoporosis; fracture
+  exclude: ''
+Musculoskeletal - Arthritis and Connective Tissue:
+  definition: Osteoarthritis, RA-as-joint-disease, connective tissue.
+  include: osteoarthritis; rheumatoid arthritis; connective tissue
+  exclude: ''
+Dermatology - Skin Conditions and Pigmentation:
+  definition: Skin disease, pigmentation, hair, nails.
+  include: psoriasis; eczema; pigmentation; skin; hair colour
+  exclude: ''
+Ophthalmology - Eye Disease and Vision:
+  definition: Eye disease, refractive error, vision.
+  include: glaucoma; macular degeneration; myopia; refractive; retinal
+  exclude: ''
+Dental and Oral Health:
+  definition: Teeth, periodontal, oral health.
+  include: dental; periodontal; tooth; caries
+  exclude: ''
+Pain - Chronic Pain Conditions:
+  definition: Chronic/site-specific pain phenotypes.
+  include: chronic pain; back pain; widespread pain
+  exclude: fear-of-pain (psychiatric); pain-relief medication (pharmacogenomics)
+Vitamins and Micronutrients:
+  definition: Vitamin and mineral/trace element levels.
+  include: vitamin D; vitamin B12; folate; zinc; selenium; iron status
+  exclude: ''
+Pharmacogenomics - Drug Response:
+  definition: Drug response, medication use, adverse drug events, treatment resistance.
+  include: drug response; medication use; statin response; adverse drug
+  exclude: ''
+Sensory - Hearing:
+  definition: Hearing, hearing loss/impairment, hearing aids, tinnitus, auditory function.
+  include: hearing; deafness; tinnitus; auditory function; hearing aid
+  exclude: taste; smell/olfaction; brain-imaging traits (regional glucose metabolism)
+Sensory - Taste and Smell:
+  definition: 'Chemosensory perception: taste (sweet/bitter/sour/salty/umami) and olfaction/smell.'
+  include: taste perception; taste preference; sense of smell; olfaction
+  exclude: hearing; taste traits whose primary phenotype is metabolic/obesity (belong in metabolic categories)

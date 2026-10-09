@@ -1,0 +1,15 @@
+# Environment for Snakefile_analysis.py (plotting). Versions taken from the
+# environment used for the analysis; only packages the plot scripts import.
+# adjusttext is pinned on purpose: label placement in the figures depends on it
+# (the scripts silently fall back to a built-in routine if it is missing).
+name: plots
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.9
+  - numpy=1.26.4
+  - pandas=2.3.2
+  - scipy=1.16.2
+  - matplotlib-base=3.9.1
+  - seaborn-base=0.13.2
+  - adjusttext=1.4.0

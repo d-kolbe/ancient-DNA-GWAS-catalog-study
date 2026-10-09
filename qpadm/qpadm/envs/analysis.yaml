@@ -1,0 +1,16 @@
+# Environment for Snakefile_analysis.py (the environment that launches Snakemake also
+# needs pandas). Versions taken from the environment used for the analysis.
+name: analysis
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11.9
+  - numpy=1.26.4
+  - pandas=2.3.2
+  - scipy=1.16.2
+  - statsmodels=0.14.5
+  - lifelines=0.30.1
+  - scikit-learn=1.7.2
+  - matplotlib-base=3.9.1
+  - bcftools=1.21

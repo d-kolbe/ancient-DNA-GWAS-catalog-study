@@ -1,0 +1,24 @@
+# =============================================================================
+# config_qpadm.yaml -- global ancestry (qpAdm) of UK Biobank individuals
+# =============================================================================
+# Paths are relative to the project folder (run Snakemake from there).
+# Site-specific overrides (absolute paths, existing conda env) go into
+# config/config_qpadm.local.yaml (gitignored).
+# Run once per PLINK set (different plink_prefix and output_dir).
+
+output_dir: "results/qpadm"
+
+# Merged PLINK set (bed/bim/fam): the first n_reference_samples individuals are the
+# reference individuals (left/right populations), followed by the UK Biobank individuals.
+plink_prefix: "data/UKB_1240K_HO"
+n_reference_samples: 123
+
+# UKB individuals per subset (= per set of parallel qpAdm runs)
+subset_size: 1000
+
+# qpAdm populations, one per line (left = sources, right = outgroups)
+leftpops:  "resources/leftpops.txt"
+rightpops: "resources/rightpops.txt"
+
+# .ind file with the population labels of the reference individuals
+reference_ind: "resources/GSA_1240K.ind"

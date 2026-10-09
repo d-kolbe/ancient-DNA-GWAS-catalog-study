@@ -1,0 +1,14 @@
+# Environment for Snakefile_ars.py (all rules; the environment that launches
+# Snakemake also needs pandas). Versions taken from the environment used for the analysis.
+# numpy is pinned to 1.26.4 on purpose: scripts/ukb_compute_contributions.py
+# parses bcftools output with np.fromstring, which behaves differently in numpy 2.
+name: ars
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11.9
+  - numpy=1.26.4
+  - pandas=2.3.2
+  - matplotlib-base=3.9.1
+  - bcftools=1.21

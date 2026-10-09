@@ -1,0 +1,67 @@
+# Rename to .gitignore and place at the repo root
+
+# Snakemake / cluster
+.snakemake/
+.snakemake_timestamp
+**/logs/
+slurm-*.out
+slurm-*.err
+
+# Run outputs and intermediates (adjust to your folder names)
+**/results/
+**/run/
+**/output/
+**/tmp/
+
+# External inputs (symlink or copy here; never committed)
+**/data/
+**/software/
+
+# Local config overrides holding real paths
+**/config/config.local.yaml
+**/config/*.local.yaml
+
+# Genomic data, never commit
+*.vcf
+*.vcf.gz
+*.bcf
+*.bam
+*.bai
+*.cram
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bim
+*.fam
+*.bgen
+*.pgen
+*.tbi
+*.csi
+
+# Large binary / serialized objects
+*.rds
+*.RData
+*.rdata
+*.h5
+*.npz
+*.pkl
+*.pickle
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# R
+.Rhistory
+.Rapp.history
+.Rproj.user/
+
+# Secrets / OS
+.env
+*credentials*
+*.token
+.DS_Store

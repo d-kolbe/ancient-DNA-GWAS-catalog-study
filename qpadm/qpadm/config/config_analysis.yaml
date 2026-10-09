@@ -1,0 +1,701 @@
+# =============================================================================
+# UKB Ancestry × Phenotype Pipeline — Configuration
+# =============================================================================
+
+# ─── Paths ────────────────────────────────────────────────────────────────────
+# Relative to the project folder (run Snakemake from there). Site-specific overrides
+# (absolute paths, existing conda env) go into config/config_analysis.local.yaml.
+results_dir: "results/analysis"
+
+# ─── Admixture file ───────────────────────────────────────────────────────────
+# qpAdm proportions of all UKB individuals: eid + one column per source population.
+# qpadm_tables lists the tables written by Snakefile_qpadm.py (one per PLINK set);
+# they are concatenated into admixture_file. Remove qpadm_tables to use an
+# existing admixture_file as it is.
+qpadm_tables:
+  - "results/qpadm/final_output/aggregated_qpadm_all.tsv"
+admixture_file: "results/analysis/aggregated_qpadm_all_merged.tsv"
+
+ancestry_rename:
+  Turkey_N:                  EF
+  Russia_Samara_EBA_Yamnaya: Steppe
+  Luxembourg_Loschbour.DG:   HG
+
+
+# ─── Phenotype file groups ────────────────────────────────────────────────────
+phenotype_files:
+
+  phenotype:
+    data:    "data/ukb/phenotype_data.tsv"
+    chars:   "data/ukb/phenotype_chars.tsv"
+    cbkeys:  "data/ukb/phenotype_cbkeys.tsv"
+
+  touchscreen:
+    data:    "data/ukb/touchscreen_data.tsv"
+    chars:   "data/ukb/touchscreen_chars.tsv"
+    cbkeys:  "data/ukb/touchscreen_cbkeys.tsv"
+
+  FirstOccurrences:
+    data:    "data/ukb/FirstOccurrences_data.tsv"
+    chars:   "data/ukb/FirstOccurrences_chars.tsv"
+    cbkeys:  "data/ukb/FirstOccurrences_cbkeys.tsv"
+
+  popchar:
+    data:    "data/ukb/popchar_data.tsv"
+    chars:   "data/ukb/popchar_chars.tsv"
+    cbkeys:  "data/ukb/popchar_cbkeys.tsv"
+
+  metabolomics:
+    data:    "data/ukb/metabolomics_data.tsv"
+    chars:   "data/ukb/metabolomics_chars.tsv"
+    cbkeys:  null
+
+  physical_measures:
+    data:    "data/ukb/Physical_measures_data.tsv"
+    chars:   "data/ukb/Physical_measures_chars.json"
+    cbkeys:  null
+
+
+# ─── Covariate sets ───────────────────────────────────────────────────────────
+covariate_sets:
+
+  age_sex:
+    age: 21022
+    sex: 31
+
+  age_sex_smoking_alcohol:
+    age: 21022
+    sex: 31
+    smoking:
+      field_id: 20116
+      categorical: true
+    alcohol:
+      field_id: 20117
+      categorical: true
+
+  age_sex_smoking_alcohol_bmi:
+    age: 21022
+    sex: 31
+    smoking:
+      field_id: 20116
+      categorical: true
+    alcohol:
+      field_id: 20117
+      categorical: true
+    bmi: 21001
+
+  age_sex_income:
+    age: 21022
+    sex: 31
+    income: 26411
+
+  age_sex_lifestyle_pcs:
+    age: 21022
+    sex: 31
+    lifestyle_PC1: lifestyle_pc
+    lifestyle_PC2: lifestyle_pc
+    lifestyle_PC3: lifestyle_pc
+    lifestyle_PC4: lifestyle_pc
+    lifestyle_PC5: lifestyle_pc
+
+
+# ─── Lifestyle PCA ────────────────────────────────────────────────────────────
+lifestyle_pca:
+  n_pcs_to_use: 5
+
+  fields:
+    smoking_status:
+      field_id: 20116
+      source: touchscreen
+      encoding: {0: 0, 1: 2, 2: 1}
+    alcohol_frequency:
+      field_id: 1558
+      source: touchscreen
+      encoding: {6: 0, 5: 1, 4: 2, 3: 3, 2: 4, 1: 5}
+    oily_fish:
+      field_id: 1329
+      source: touchscreen
+      encoding: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+    non_oily_fish:
+      field_id: 1339
+      source: touchscreen
+      encoding: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+    processed_meat:
+      field_id: 1349
+      source: touchscreen
+      encoding: {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+    fresh_fruit:
+      field_id: 1309
+      source: touchscreen
+    cooked_veg:
+      field_id: 1289
+      source: touchscreen
+    salad_raw_veg:
+      field_id: 1299
+      source: touchscreen
+    bread_intake:
+      field_id: 1438
+      source: touchscreen
+    tea_intake:
+      field_id: 1488
+      source: touchscreen
+    walking_days:
+      field_id: 864
+      source: touchscreen
+    moderate_activity_days:
+      field_id: 884
+      source: touchscreen
+    vigorous_activity_days:
+      field_id: 904
+      source: touchscreen
+    tv_hours:
+      field_id: 1070
+      source: touchscreen
+    sleep_duration:
+      field_id: 1160
+      source: touchscreen
+    income_deprivation:
+      field_id: 26411
+      source: popchar
+
+
+# ─── Traits to analyse ────────────────────────────────────────────────────────
+traits:
+
+  # ── FirstOccurrences — IBD ──
+  - field_id: 131626    # Crohn's disease
+    snps:
+      - {chrom: 1,  pos: 67705958,  ref: G, alt: A, label: "rs11209026"}  # IL23R
+      - {chrom: 5,  pos: 40401509,  ref: T, alt: G, label: "rs17234657"}
+      - {chrom: 18, pos: 12779947,  ref: G, alt: T, label: "rs2542151"}   # PTPN2
+      - {chrom: 21, pos: 16805220,  ref: T, alt: C, label: "rs1736135"}
+      - {chrom: 1,  pos: 172853460, ref: C, alt: T, label: "rs7517810"}
+      - {chrom: 10, pos: 101291593, ref: T, alt: C, label: "rs11190140"}
+      - {chrom: 1,  pos: 200935866, ref: T, alt: C, label: "rs11584383"}
+      - {chrom: 8,  pos: 126534671, ref: A, alt: G, label: "rs921720"}
+      - {chrom: 5,  pos: 96252803,  ref: G, alt: A, label: "rs1363907"}   # ERAP2
+      - {chrom: 8,  pos: 129567181, ref: T, alt: C, label: "rs6651252"}
+
+  - field_id: 131628    # Ulcerative colitis
+    snps:
+      - {chrom: 1,  pos: 67705958,  ref: G, alt: A, label: "rs11209026"}  # IL23R
+      - {chrom: 1,  pos: 200877562, ref: C, alt: A, label: "rs7554511"}   # INAVA
+      - {chrom: 22, pos: 50435480,  ref: A, alt: G, label: "rs5771069"}   # IL17REL
+      - {chrom: 10, pos: 101291593, ref: T, alt: C, label: "rs11190140"}
+      - {chrom: 3,  pos: 49719729,  ref: G, alt: A, label: "rs9822268"}
+      - {chrom: 6,  pos: 138006504, ref: G, alt: A, label: "rs6920220"}
+      - {chrom: 6,  pos: 29938258,  ref: C, alt: A, label: "rs2523971"}
+      - {chrom: 20, pos: 43065028,  ref: A, alt: C, label: "rs6017342"}
+      - {chrom: 18, pos: 12809340,  ref: A, alt: G, label: "rs1893217"}   # PTPN2
+      - {chrom: 21, pos: 16817051,  ref: A, alt: G, label: "rs1297265"}
+
+  - field_id: IBD       # Combined IBD
+    type: combined_cases
+    label: "IBD (Crohn's disease + Ulcerative colitis)"
+    components: [131626, 131628]
+    snps:
+      - {chrom: 1,  pos: 67705958,  ref: G, alt: A, label: "rs11209026"}  # IL23R
+      - {chrom: 1,  pos: 8021973,   ref: G, alt: T, label: "rs35675666"}  # PARK7
+      - {chrom: 1,  pos: 200877562, ref: C, alt: A, label: "rs7554511"}   # INAVA
+      - {chrom: 9,  pos: 139266405, ref: G, alt: A, label: "rs10781499"}  # CARD9
+      - {chrom: 10, pos: 101284237, ref: T, alt: G, label: "rs4409764"}
+      - {chrom: 21, pos: 43855067,  ref: A, alt: C, label: "rs1893592"}   # UBASH3A
+      - {chrom: 5,  pos: 40410584,  ref: T, alt: C, label: "rs11742570"}
+      - {chrom: 18, pos: 12809340,  ref: A, alt: G, label: "rs1893217"}   # PTPN2
+      - {chrom: 5,  pos: 96252803,  ref: G, alt: A, label: "rs1363907"}   # ERAP2
+      - {chrom: 13, pos: 99907341,  ref: G, alt: A, label: "rs3742130"}
+
+  # ── FirstOccurrences — Neuropsychiatric ──
+  - field_id: 130874    # Schizophrenia
+    snps:
+      - {chrom: 6,  pos: 33395199,  ref: G, alt: A, label: "rs9461856"}
+      - {chrom: 7,  pos: 104852654, ref: G, alt: A, label: "rs41563"}
+      - {chrom: 12, pos: 2402246,   ref: A, alt: G, label: "rs1024582"}   # CACNA1C
+      - {chrom: 6,  pos: 26272548,  ref: G, alt: T, label: "rs61747867"}
+      - {chrom: 14, pos: 104205123, ref: G, alt: A, label: "rs17292804"}
+      - {chrom: 3,  pos: 2547786,   ref: G, alt: T, label: "rs17194490"}  # CNTN4
+      - {chrom: 7,  pos: 110898915, ref: T, alt: C, label: "rs13240464"}  # IMMP2L
+      - {chrom: 1,  pos: 30433951,  ref: T, alt: C, label: "rs1498232"}
+      - {chrom: 21, pos: 25105211,  ref: A, alt: G, label: "rs2828478"}
+      - {chrom: 22, pos: 40000313,  ref: T, alt: C, label: "rs5995756"}   # CACNA1I
+
+  - field_id: 130892    # Bipolar disorder
+    snps:
+      - {chrom: 13, pos: 42653437,  ref: C, alt: A, label: "rs1012053"}   # DGKH
+      - {chrom: 5,  pos: 7519298,   ref: A, alt: G, label: "rs17826816"}  # ADCY2
+      - {chrom: 19, pos: 19361735,  ref: G, alt: A, label: "rs1064395"}   # NCAN
+      - {chrom: 12, pos: 49389320,  ref: A, alt: C, label: "rs1054442"}
+      - {chrom: 8,  pos: 9763581,   ref: C, alt: G, label: "rs62489493"}
+      - {chrom: 11, pos: 70517927,  ref: G, alt: A, label: "rs12575685"}  # SHANK2
+      - {chrom: 20, pos: 43682551,  ref: T, alt: G, label: "rs67712855"}  # STK4
+      - {chrom: 7,  pos: 105043229, ref: A, alt: G, label: "rs11764361"}
+      - {chrom: 11, pos: 61618608,  ref: A, alt: G, label: "rs174592"}    # FADS2
+      - {chrom: 5,  pos: 78849505,  ref: G, alt: T, label: "rs6865469"}
+
+  - field_id: 130896    # Recurrent depressive disorder
+    snps:
+      - {chrom: 2,  pos: 198807015, ref: T, alt: A, label: "rs1518367"}   # PLCL1
+      - {chrom: 16, pos: 72214276,  ref: C, alt: A, label: "rs11643192"}
+      - {chrom: 11, pos: 113392994, ref: C, alt: T, label: "rs2514218"}   # DRD2
+      - {chrom: 7,  pos: 82514089,  ref: C, alt: T, label: "rs34866621"}  # PCLO
+      - {chrom: 12, pos: 2344644,   ref: G, alt: A, label: "rs769087"}    # CACNA1C
+      - {chrom: 15, pos: 37643831,  ref: C, alt: T, label: "rs8037355"}
+      - {chrom: 11, pos: 61557803,  ref: T, alt: C, label: "rs102275"}    # TMEM258
+      - {chrom: 2,  pos: 22582968,  ref: T, alt: C, label: "rs61533748"}
+      - {chrom: 12, pos: 23947737,  ref: A, alt: C, label: "rs4074723"}   # SOX5
+      - {chrom: 19, pos: 30939989,  ref: C, alt: T, label: "rs33431"}
+
+  - field_id: 130904    # Phobic anxiety disorder
+    snps:
+      - {chrom: 15, pos: 91426560,  ref: G, alt: A, label: "rs4702"}      # FURIN
+      - {chrom: 11, pos: 113448762, ref: C, alt: A, label: "rs7928017"}   # DRD2
+      - {chrom: 10, pos: 106571608, ref: C, alt: T, label: "rs1565418"}   # SORCS3
+      - {chrom: 3,  pos: 49878113,  ref: T, alt: C, label: "rs2271961"}   # TRAIP
+      - {chrom: 3,  pos: 16852736,  ref: A, alt: G, label: "rs7625233"}   # PLCL2
+      - {chrom: 18, pos: 35134259,  ref: C, alt: T, label: "rs12607755"}  # CELF4
+      - {chrom: 18, pos: 50709981,  ref: A, alt: G, label: "rs17408393"}  # DCC
+      - {chrom: 11, pos: 113270160, ref: A, alt: G, label: "rs2734849"}   # ANKK1
+      - {chrom: 2,  pos: 144257639, ref: A, alt: G, label: "rs13409451"}
+      - {chrom: 18, pos: 30626497,  ref: T, alt: A, label: "rs77363699"}
+
+  - field_id: 130906    # Other anxiety disorder
+    snps:
+      - {chrom: 15, pos: 91426560,  ref: G, alt: A, label: "rs4702"}      # FURIN
+      - {chrom: 11, pos: 113448762, ref: C, alt: A, label: "rs7928017"}   # DRD2
+      - {chrom: 10, pos: 106571608, ref: C, alt: T, label: "rs1565418"}   # SORCS3
+      - {chrom: 3,  pos: 49878113,  ref: T, alt: C, label: "rs2271961"}   # TRAIP
+      - {chrom: 3,  pos: 16852736,  ref: A, alt: G, label: "rs7625233"}   # PLCL2
+      - {chrom: 18, pos: 35134259,  ref: C, alt: T, label: "rs12607755"}  # CELF4
+      - {chrom: 18, pos: 50709981,  ref: A, alt: G, label: "rs17408393"}  # DCC
+      - {chrom: 11, pos: 113270160, ref: A, alt: G, label: "rs2734849"}   # ANKK1
+      - {chrom: 2,  pos: 144257639, ref: A, alt: G, label: "rs13409451"}
+      - {chrom: 18, pos: 30626497,  ref: T, alt: A, label: "rs77363699"}
+
+  - field_id: 130910    # Reaction to severe stress
+    snps:
+      - {chrom: 12, pos: 103556972, ref: T, alt: C, label: "rs2292996"}
+      - {chrom: 2,  pos: 161904823, ref: A, alt: G, label: "rs197261"}
+      - {chrom: 3,  pos: 49819102,  ref: C, alt: G, label: "rs11130221"}  # IP6K1
+      - {chrom: 7,  pos: 114071035, ref: C, alt: T, label: "rs1476535"}   # FOXP2
+      - {chrom: 5,  pos: 153133722, ref: C, alt: T, label: "rs13168358"}  # GRIA1
+      - {chrom: 15, pos: 91416550,  ref: C, alt: A, label: "rs17514846"}  # FURIN
+      - {chrom: 1,  pos: 73837417,  ref: C, alt: A, label: "rs12128161"}
+      - {chrom: 1,  pos: 66434743,  ref: G, alt: A, label: "rs7519259"}   # PDE4B
+      - {chrom: 7,  pos: 126378255, ref: A, alt: G, label: "rs10487459"}  # GRM8
+      - {chrom: 3,  pos: 16851202,  ref: A, alt: G, label: "rs748832"}    # PLCL2
+
+  # ── FirstOccurrences — Hearing ──
+  - field_id: 131258    # Conductive and sensorineural hearing loss
+    snps:
+      - {chrom: 5,  pos: 72920029,  ref: C, alt: T, label: "rs1981809"}
+      - {chrom: 5,  pos: 73077349,  ref: A, alt: G, label: "rs4413512"}   # ARHGEF28
+      - {chrom: 6,  pos: 133789728, ref: G, alt: A, label: "rs9493627"}   # EYA4
+      - {chrom: 3,  pos: 121712980, ref: C, alt: T, label: "rs3915060"}   # ILDR1
+      - {chrom: 1,  pos: 165109131, ref: C, alt: T, label: "rs7525101"}   # LMX1A
+      - {chrom: 11, pos: 118480223, ref: T, alt: C, label: "rs67307131"}  # PHLDB1
+      - {chrom: 14, pos: 52514981,  ref: A, alt: G, label: "rs1566128"}   # NID2
+      - {chrom: 16, pos: 56379937,  ref: C, alt: T, label: "rs13337678"}  # GNAO1
+      - {chrom: 13, pos: 76417101,  ref: C, alt: T, label: "rs920701"}    # LMO7
+      - {chrom: 12, pos: 109896165, ref: T, alt: C, label: "rs7313797"}   # KCTD10
+
+  - field_id: 131260    # Other hearing loss
+    snps:
+      - {chrom: 5,  pos: 72920029,  ref: C, alt: T, label: "rs1981809"}
+      - {chrom: 5,  pos: 73077349,  ref: A, alt: G, label: "rs4413512"}   # ARHGEF28
+      - {chrom: 6,  pos: 133789728, ref: G, alt: A, label: "rs9493627"}   # EYA4
+      - {chrom: 3,  pos: 121712980, ref: C, alt: T, label: "rs3915060"}   # ILDR1
+      - {chrom: 1,  pos: 165109131, ref: C, alt: T, label: "rs7525101"}   # LMX1A
+      - {chrom: 11, pos: 118480223, ref: T, alt: C, label: "rs67307131"}  # PHLDB1
+      - {chrom: 14, pos: 52514981,  ref: A, alt: G, label: "rs1566128"}   # NID2
+      - {chrom: 16, pos: 56379937,  ref: C, alt: T, label: "rs13337678"}  # GNAO1
+      - {chrom: 13, pos: 76417101,  ref: C, alt: T, label: "rs920701"}    # LMO7
+      - {chrom: 12, pos: 109896165, ref: T, alt: C, label: "rs7313797"}   # KCTD10
+
+  # ── Physical measures ──
+  - field_id: 21001     # BMI
+    snps:
+      - {chrom: 1,  pos: 78450517,  ref: C, alt: A, label: "rs34517439"}  # GIPC2
+      - {chrom: 16, pos: 53800954,  ref: T, alt: C, label: "rs1421085"}   # FTO
+      - {chrom: 11, pos: 27679916,  ref: C, alt: T, label: "rs6265"}      # BDNF
+      - {chrom: 16, pos: 29994922,  ref: C, alt: T, label: "rs3814883"}   # TAOK2
+      - {chrom: 12, pos: 50263148,  ref: G, alt: A, label: "rs7132908"}   # FAIM2
+      - {chrom: 11, pos: 8639200,   ref: T, alt: C, label: "rs4929923"}   # TRIM66
+      - {chrom: 14, pos: 103246470, ref: A, alt: G, label: "rs3803286"}   # TRAF3
+      - {chrom: 12, pos: 110903380, ref: G, alt: C, label: "rs6606686"}   # GPN3
+      - {chrom: 13, pos: 58257667,  ref: T, alt: A, label: "rs6561937"}   # PCDH17
+      - {chrom: 1,  pos: 201800511, ref: T, alt: G, label: "rs2678204"}   # IPO9
+
+  - field_id: 23099     # Body fat percentage
+    snps:
+      - {chrom: 16, pos: 28883241,  ref: A, alt: G, label: "rs7498665"}   # SH2B1
+      - {chrom: 11, pos: 27695464,  ref: A, alt: G, label: "rs11030108"}  # BDNF
+      - {chrom: 1,  pos: 77967507,  ref: T, alt: A, label: "rs71658797"}  # AK5
+      - {chrom: 12, pos: 124409502, ref: G, alt: A, label: "rs7133378"}   # CCDC92
+      - {chrom: 18, pos: 21080859,  ref: C, alt: A, label: "rs1893659"}
+      - {chrom: 4,  pos: 18329824,  ref: A, alt: G, label: "rs2192527"}   # LCORL
+      - {chrom: 11, pos: 8690718,   ref: T, alt: C, label: "rs11042030"}  # TRIM66
+      - {chrom: 16, pos: 31075175,  ref: G, alt: A, label: "rs2303223"}   # ZNF668
+      - {chrom: 3,  pos: 53777176,  ref: T, alt: C, label: "rs2680648"}   # CACNA1D
+      - {chrom: 13, pos: 58257667,  ref: T, alt: A, label: "rs6561937"}   # PCDH17
+
+  - field_id: 49        # Hip circumference
+    snps:
+      - {chrom: 16, pos: 28632021,  ref: T, alt: G, label: "rs2411453"}
+      - {chrom: 1,  pos: 78450517,  ref: C, alt: A, label: "rs34517439"}  # GIPC2
+      - {chrom: 14, pos: 29680331,  ref: G, alt: A, label: "rs4981693"}
+      - {chrom: 16, pos: 29994922,  ref: C, alt: T, label: "rs3814883"}   # TAOK2
+      - {chrom: 12, pos: 110903380, ref: G, alt: C, label: "rs6606686"}   # GPN3
+      - {chrom: 12, pos: 50263148,  ref: G, alt: A, label: "rs7132908"}   # FAIM2
+      - {chrom: 6,  pos: 41924278,  ref: C, alt: T, label: "rs13340461"}  # CCND3
+      - {chrom: 14, pos: 103251452, ref: T, alt: G, label: "rs12880641"}  # TRAF3
+      - {chrom: 14, pos: 33292743,  ref: A, alt: C, label: "rs2239647"}   # AKAP6
+      - {chrom: 2,  pos: 100871330, ref: G, alt: A, label: "rs6722320"}
+
+  # ── Computed anthropometry ──
+  - field_id: waist_hip_ratio
+    type: computed
+    label: "Waist-hip ratio"
+    source_group: physical_measures
+    fields:
+      waist: 48
+      hip:   49
+    formula: "waist / hip"
+    snps:
+      - {chrom: 19, pos: 33893008,  ref: A, alt: G, label: "rs3786897"}   # PEPD
+      - {chrom: 6,  pos: 7211818,   ref: G, alt: A, label: "rs1334576"}   # RREB1
+      - {chrom: 3,  pos: 64701146,  ref: A, alt: G, label: "rs9860730"}
+      - {chrom: 16, pos: 28906084,  ref: G, alt: C, label: "rs9931989"}   # ATP2A1
+      - {chrom: 6,  pos: 127452639, ref: C, alt: G, label: "rs9491696"}   # RSPO3
+      - {chrom: 3,  pos: 35678337,  ref: G, alt: A, label: "rs7612999"}
+      - {chrom: 3,  pos: 49751585,  ref: C, alt: T, label: "rs2291542"}   # RNF123
+      - {chrom: 6,  pos: 50829471,  ref: A, alt: G, label: "rs4715208"}
+      - {chrom: 3,  pos: 129334233, ref: C, alt: A, label: "rs10804591"}
+      - {chrom: 19, pos: 45395619,  ref: A, alt: G, label: "rs2075650"}   # TOMM40
+
+  - field_id: hip_index
+    type: computed
+    label: "Hip index"
+    source_group: physical_measures
+    fields:
+      hip:    49
+      height: 50
+      weight: 21002
+    formula: "hip / (height / 100 * weight)"
+
+  # ── NMR Metabolomics — Fatty acids ──
+  - field_id: 23442    # Total Fatty Acids
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61717607,  ref: C, alt: T, label: "rs972354"}    # BEST1
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 11, pos: 61875062,  ref: A, alt: G, label: "rs61895503"}
+      - {chrom: 11, pos: 61685790,  ref: C, alt: G, label: "rs174480"}    # RAB3IL1
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 8,  pos: 126479362, ref: C, alt: T, label: "rs6982502"}   # TRIB1AL
+
+  - field_id: 23443    # Degree of Unsaturation
+
+  - field_id: 23444    # Omega-3 Fatty Acids
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 8,  pos: 126479362, ref: C, alt: T, label: "rs6982502"}   # TRIB1AL
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 11, pos: 61875062,  ref: A, alt: G, label: "rs61895503"}
+      - {chrom: 6,  pos: 161010118, ref: A, alt: G, label: "rs10455872"}  # LPA
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+
+  - field_id: 23445    # Omega-6 Fatty Acids
+    snps:
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 15, pos: 58678720,  ref: T, alt: C, label: "rs261290"}    # ALDH1A2
+      - {chrom: 1,  pos: 109817838, ref: T, alt: C, label: "rs660240"}    # CELSR2
+      - {chrom: 18, pos: 47158234,  ref: C, alt: T, label: "rs9304381"}   # LIPG
+      - {chrom: 2,  pos: 21319016,  ref: T, alt: G, label: "rs672889"}    # APOB
+      - {chrom: 15, pos: 58725839,  ref: A, alt: G, label: "rs633695"}    # LIPC
+      - {chrom: 15, pos: 58571910,  ref: C, alt: T, label: "rs11854242"}  # ALDH1A2
+      - {chrom: 9,  pos: 136149711, ref: A, alt: T, label: "rs115478735"} # ABO
+      - {chrom: 4,  pos: 3443931,   ref: A, alt: G, label: "rs13108218"}  # HGFAC
+      - {chrom: 4,  pos: 69340991,  ref: T, alt: A, label: "rs4860948"}
+
+  - field_id: 23446    # Polyunsaturated Fatty Acids
+  - field_id: 23447    # Monounsaturated Fatty Acids
+
+  - field_id: 23448    # Saturated Fatty Acids
+    snps:
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 6,  pos: 161010118, ref: A, alt: G, label: "rs10455872"}  # LPA
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 8,  pos: 126507389, ref: C, alt: A, label: "rs2954038"}   # TRIB1AL
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 1,  pos: 109817838, ref: T, alt: C, label: "rs660240"}    # CELSR2
+      - {chrom: 11, pos: 116661826, ref: T, alt: C, label: "rs2072560"}   # APOA5
+      - {chrom: 1,  pos: 62960101,  ref: A, alt: G, label: "rs10889335"}  # DOCK7
+      - {chrom: 19, pos: 45396144,  ref: C, alt: T, label: "rs11556505"}  # TOMM40
+      - {chrom: 18, pos: 47181668,  ref: A, alt: T, label: "rs2156552"}   # ACAA2
+
+  - field_id: 23450    # Docosahexaenoic Acid (DHA)
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 11, pos: 61875062,  ref: A, alt: G, label: "rs61895503"}
+      - {chrom: 11, pos: 61685790,  ref: C, alt: G, label: "rs174480"}    # RAB3IL1
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+      - {chrom: 18, pos: 47172283,  ref: A, alt: G, label: "rs2187375"}   # LIPG
+
+  # ── NMR Metabolomics — Fatty acid ratios ──
+  - field_id: 23451    # Omega-3 to Total FA %
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61717607,  ref: C, alt: T, label: "rs972354"}    # BEST1
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 11, pos: 61875062,  ref: A, alt: G, label: "rs61895503"}
+      - {chrom: 11, pos: 61685790,  ref: C, alt: G, label: "rs174480"}    # RAB3IL1
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 8,  pos: 126479362, ref: C, alt: T, label: "rs6982502"}   # TRIB1AL
+
+  - field_id: 23452    # Omega-6 to Total FA %
+    snps:
+      - {chrom: 6,  pos: 161010118, ref: A, alt: G, label: "rs10455872"}  # LPA
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 8,  pos: 126507308, ref: T, alt: C, label: "rs2980888"}   # TRIB1AL
+      - {chrom: 7,  pos: 73020337,  ref: C, alt: G, label: "rs3812316"}   # MLXIPL
+      - {chrom: 8,  pos: 19820433,  ref: T, alt: C, label: "rs12679834"}  # LPL
+      - {chrom: 11, pos: 116661826, ref: T, alt: C, label: "rs2072560"}   # APOA5
+      - {chrom: 4,  pos: 87976359,  ref: A, alt: T, label: "rs1471251"}   # AFF1
+      - {chrom: 8,  pos: 19854773,  ref: T, alt: C, label: "rs2410622"}   # LPL
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 12, pos: 57735045,  ref: G, alt: A, label: "rs11609805"}  # R3HDM2
+
+  - field_id: 23453    # Polyunsaturated FA to Total FA %
+  - field_id: 23454    # Monounsaturated FA to Total FA %
+  - field_id: 23455    # Saturated FA to Total FA %
+
+  - field_id: 23457    # DHA to Total FA %
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 6,  pos: 161010118, ref: A, alt: G, label: "rs10455872"}  # LPA
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 11, pos: 61685790,  ref: C, alt: G, label: "rs174480"}    # RAB3IL1
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 12, pos: 103535020, ref: G, alt: A, label: "rs7135240"}
+
+  - field_id: 23459    # Omega-6 to Omega-3 ratio
+    snps:
+      - {chrom: 11, pos: 61601872,  ref: C, alt: T, label: "rs2845574"}   # FADS2
+      - {chrom: 11, pos: 61464124,  ref: G, alt: A, label: "rs112687416"} # DAGLA
+      - {chrom: 11, pos: 61730234,  ref: T, alt: C, label: "rs1800009"}   # FTH1
+      - {chrom: 11, pos: 61815803,  ref: T, alt: C, label: "rs4963452"}
+      - {chrom: 2,  pos: 27730940,  ref: T, alt: C, label: "rs1260326"}   # GCKR
+      - {chrom: 8,  pos: 126479362, ref: C, alt: T, label: "rs6982502"}   # TRIB1AL
+      - {chrom: 11, pos: 61875062,  ref: A, alt: G, label: "rs61895503"}
+      - {chrom: 11, pos: 60906279,  ref: G, alt: T, label: "rs80029472"}
+      - {chrom: 11, pos: 61685790,  ref: C, alt: G, label: "rs174480"}    # RAB3IL1
+      - {chrom: 15, pos: 58678512,  ref: C, alt: T, label: "rs10468017"}  # ALDH1A2
+
+  # ── NMR Metabolomics — Cholesterol ──
+  - field_id: 23405    # LDL Cholesterol
+  - field_id: 23406    # HDL Cholesterol
+
+  # ── Parental lifespan (survival analysis) ──
+  - field_id: father_survival
+    type: survival
+    label: "Father's lifespan"
+    survival_type: father
+
+  - field_id: mother_survival
+    type: survival
+    label: "Mother's lifespan"
+    survival_type: mother
+
+  - field_id: mean_parental_survival
+    type: survival
+    label: "Mean parental lifespan"
+    survival_type: mean
+
+  - field_id: max_parental_survival
+    type: survival
+    label: "Maximum parental lifespan"
+    survival_type: max
+
+  # ── Sleep & behavioural traits ──
+  - field_id: 1180    # Chronotype — 1-4 ordinal (morning->evening), no recode needed;
+    label: "Chronotype (morning/evening person)"     # UKB_MISSING_CODES already strips -1/-3
+    snps:
+      - {chrom: 16, pos: 52684916,  ref: A, alt: G, label: "rs12927162"}  # CASC16
+      - {chrom: 3,  pos: 77205438,  ref: G, alt: T, label: "rs7429614"}   # ROBO2
+      - {chrom: 18, pos: 56824041,  ref: C, alt: A, label: "rs9964420"}   # SEC11C
+      - {chrom: 20, pos: 43538733,  ref: T, alt: C, label: "rs2072727"}   # PABPC1L
+      - {chrom: 5,  pos: 87701223,  ref: C, alt: T, label: "rs4269995"}   # TMEM161B-DT
+      - {chrom: 13, pos: 69903058,  ref: G, alt: A, label: "rs2593487"}   # LINC00383 - SRSF1P1
+      - {chrom: 2,  pos: 198950240, ref: G, alt: A, label: "rs1064213"}   # PLCL1
+      - {chrom: 17, pos: 8064083,   ref: T, alt: G, label: "rs1061032"}   # VAMP2
+      - {chrom: 12, pos: 34051765,  ref: T, alt: C, label: "rs13377754"}  # RNU6-400P - RNU6-472P
+      - {chrom: 18, pos: 22630836,  ref: T, alt: C, label: "rs1013987"}   # WBP2P1 - ZNF521
+
+  - field_id: 1200    # Insomnia — dichotomized: Never/rarely -> control, Usually -> case
+    label: "Insomnia"                                # "Sometimes" (2) excluded, per Jansen et al. 2019
+    force_analysis_type: case_control
+    recode:
+      1: 0
+      3: 1
+    snps:
+      - {chrom: 1,  pos: 107185225, ref: C, alt: T, label: "rs11184946"}  # LINC01677 - MTATP6P14
+      - {chrom: 5,  pos: 87678585,  ref: C, alt: T, label: "rs1430205"}   # TMEM161B-DT
+      - {chrom: 15, pos: 74340336,  ref: G, alt: C, label: "rs4886860"}   # PML - DNM1P33
+      - {chrom: 1,  pos: 201793440, ref: C, alt: G, label: "rs2644128"}   # NAV1, IPO9-AS1
+      - {chrom: 1,  pos: 57850914,  ref: A, alt: C, label: "rs12405761"}  # DAB1
+      - {chrom: 6,  pos: 37631768,  ref: A, alt: G, label: "rs10947690"}  # MDGA1
+      - {chrom: 3,  pos: 49211989,  ref: T, alt: C, label: "rs10865954"}  # KLHDC8B
+      - {chrom: 15, pos: 67804682,  ref: T, alt: C, label: "rs11635495"}  # IQCH-AS1
+      - {chrom: 16, pos: 59476179,  ref: T, alt: C, label: "rs2062113"}   # RPS27P27 - RNU4-58P
+      - {chrom: 12, pos: 57487814,  ref: A, alt: C, label: "rs324017"}    # NAB2
+
+  - field_id: 1980    # Worrier / anxious feelings — already binary (0/1) in UKB coding,
+    label: "Worrier / anxious feelings"               # just route it through case_control instead
+    force_analysis_type: case_control                 # of the generic categorical/continuous path
+    snps:
+      - {chrom: 10, pos: 104839152, ref: T, alt: C, label: "rs943035"}    # CNNM2
+      - {chrom: 3,  pos: 35683935,  ref: T, alt: G, label: "rs1542212"}   # ARPP21
+      - {chrom: 12, pos: 110027795, ref: A, alt: G, label: "rs11067376"}  # MVK
+      - {chrom: 11, pos: 133797581, ref: A, alt: T, label: "rs167915"}    # IGSF9B
+      - {chrom: 6,  pos: 11997050,  ref: A, alt: G, label: "rs9462364"}   # AMD1P4 - HIVEP1
+      - {chrom: 2,  pos: 168621005, ref: G, alt: A, label: "rs1375311"}   # B3GALT1
+      - {chrom: 18, pos: 35182708,  ref: T, alt: C, label: "rs72893199"}  # CELF4 - MIR4318
+      - {chrom: 9,  pos: 98245026,  ref: A, alt: G, label: "rs28510415"}  # PTCH1
+      - {chrom: 7,  pos: 127595573, ref: C, alt: T, label: "rs3808072"}   # SND1
+      - {chrom: 17, pos: 43778680,  ref: T, alt: A, label: "rs17688916"}  # LINC02210-CRHR1
+
+
+# ─── SNP-conditioned analysis ─────────────────────────────────────────────────
+vcf_pattern: "data/ukb_vcf/c{chrom}/ukb_chr{chrom}.phased.vcf.gz"   # per-chromosome UKB VCFs (GRCh37); actual names in the local config
+
+snp_cond_covset: age_sex_lifestyle_pcs
+
+snp_cond_plot_categories:
+
+  fatty_acids_snp_cond:
+    label: "NMR Fatty Acids (SNP-conditioned)"
+    traits:
+      - {field_id: 23442, label: "Total fatty acids"}
+      - {field_id: 23444, label: "Omega-3"}
+      - {field_id: 23445, label: "Omega-6"}
+      - {field_id: 23448, label: "Saturated FA"}
+      - {field_id: 23450, label: "Docosahexaenoic acid"}
+      - {field_id: 23451, label: "Omega-3 / Total FA %"}
+      - {field_id: 23452, label: "Omega-6 / Total FA %"}
+      - {field_id: 23457, label: "Docosahexaenoic acid / Total FA %"}
+      - {field_id: 23459, label: "Omega-6 / Omega-3"}
+
+  anthropometry_snp_cond:
+    label: "Anthropometry & Body Composition (SNP-conditioned)"
+    traits:
+      - {field_id: 21001,           label: "BMI"}
+      - {field_id: 23099,           label: "Body fat %"}
+      - {field_id: waist_hip_ratio, label: "Waist-hip ratio"}
+      - {field_id: 49,              label: "Hip circumference"}
+
+  ibd_snp_cond:
+    label: "Inflammatory Bowel Disease (SNP-conditioned)"
+    traits:
+      - {field_id: 131626, label: "Crohn's disease"}
+      - {field_id: 131628, label: "Ulcerative colitis"}
+      - {field_id: IBD,    label: "CD + UC"}
+
+  neuropsychiatric_snp_cond:
+    label: "Neuropsychiatric Disorders (SNP-conditioned)"
+    traits:
+      - {field_id: 130874, label: "Schizophrenia"}
+      - {field_id: 130892, label: "Bipolar disorder"}
+      - {field_id: 130896, label: "Recurrent depressive disorder"}
+      - {field_id: 130904, label: "Phobic anxiety disorder"}
+      - {field_id: 130906, label: "Other anxiety disorder"}
+      - {field_id: 130910, label: "Reaction to severe stress"}
+
+  hearing_snp_cond:
+    label: "Hearing Disorders (SNP-conditioned)"
+    traits:
+      - {field_id: 131258, label: "Conductive and sensorineural hearing loss"}
+      - {field_id: 131260, label: "Other hearing loss"}
+
+  sleep_and_behaviour_snp_cond:
+    label: "Sleep & Behavioural Traits (SNP-conditioned)"
+    traits:
+      - {field_id: 1180, label: "Chronotype (morning/evening person)"}
+      - {field_id: 1200, label: "Insomnia"}
+      - {field_id: 1980, label: "Worrier / anxious feelings"}
+
+
+# ─── Category plots ───────────────────────────────────────────────────────────
+focus_covset:   age_sex_lifestyle_pcs
+focus_ancestry: [EF, HG]
+
+plot_categories:
+
+  ibd:
+    label: "Inflammatory Bowel Disease"
+    traits:
+      - {field_id: 131626,  label: "Crohn's disease"}
+      - {field_id: 131628,  label: "Ulcerative colitis"}
+      - {field_id: IBD,     label: "CD + UC"}
+
+  anthropometry:
+    label: "Anthropometry & Body Composition"
+    traits:
+      - {field_id: 21001,           label: "BMI"}
+      - {field_id: 23099,           label: "Body fat %"}
+      - {field_id: waist_hip_ratio, label: "Waist-hip ratio"}
+      - {field_id: 49,              label: "Hip circumference"}
+
+  fatty_acids:
+    label: "NMR Fatty Acids"
+    traits:
+      - {field_id: 23442, label: "Total fatty acids"}
+      - {field_id: 23444, label: "Omega-3"}
+      - {field_id: 23445, label: "Omega-6"}
+      - {field_id: 23448, label: "Saturated FA"}
+      - {field_id: 23450, label: "Docosahexaenoic acid"}
+      - {field_id: 23451, label: "Omega-3 / Total FA %"}
+      - {field_id: 23452, label: "Omega-6 / Total FA %"}
+      - {field_id: 23457, label: "Docosahexaenoic acid / Total FA %"}
+      - {field_id: 23459, label: "Omega-6 / Omega-3"}
+
+  neuropsychiatric_disorders:
+    label: "Neuropsychiatric Disorders"
+    traits:
+      - {field_id: 130874, label: "Schizophrenia"}
+      - {field_id: 130892, label: "Bipolar disorder"}
+      - {field_id: 130896, label: "Recurrent depressive disorder"}
+      - {field_id: 130904, label: "Phobic anxiety disorder"}
+      - {field_id: 130906, label: "Other anxiety disorder"}
+      - {field_id: 130910, label: "Reaction to severe stress"}
+
+  hearing_disorders:
+    label: "Hearing Disorders"
+    traits:
+      - {field_id: 131258, label: "Conductive and sensorineural hearing loss"}
+      - {field_id: 131260, label: "Other hearing loss"}
+
+  sleep_and_behaviour:
+    label: "Sleep & Behavioural Traits"
+    traits:
+      - {field_id: 1180, label: "Chronotype (morning/evening person)"}
+      - {field_id: 1200, label: "Insomnia"}
+      - {field_id: 1980, label: "Worrier / anxious feelings"}

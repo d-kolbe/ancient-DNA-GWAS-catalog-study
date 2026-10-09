@@ -1,0 +1,29 @@
+op	trait	category	reason
+remove	Age related hearing loss-related regional glucose metabolism (Bilateral Heschl’s gyrus)	Sensory - Hearing	brain-imaging (regional glucose metabolism), not a hearing phenotype
+remove	Age related hearing loss-related regional glucose metabolism (Cochlear nucleus)	Sensory - Hearing	brain-imaging (regional glucose metabolism), not a hearing phenotype
+remove	Age related hearing loss-related regional glucose metabolism (Inferior colliculus)	Sensory - Hearing	brain-imaging (regional glucose metabolism), not a hearing phenotype
+remove	Bitter taste perception (6-n-propylthiouracil) in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Bitter taste perception (6-n-propylthiouracil) in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Bitter taste perception (phenylthiocarbamide) in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Bitter taste perception (phenylthiocarbamide) in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	COVID-19 symptoms (loss of smell or taste vs no loss of smell or taste)	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	COVID-19 symptoms (loss of smell or taste vs no loss of smell or taste)	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Salty taste perception in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Salty taste perception in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Sour taste perception in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Sour taste perception in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Sweet taste perception in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Sweet taste perception in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Taste perception (total score including 6-n-propylthiouracil) in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Taste perception (total score including 6-n-propylthiouracil) in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Taste perception (total score including phenylthiocarbamide) in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Taste perception (total score including phenylthiocarbamide) in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Umami taste perception in obesity with metabolic syndrome	Sensory - Hearing	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+remove	Umami taste perception in obesity with metabolic syndrome	Sensory - Taste and Smell	taste/smell trait whose primary phenotype is metabolic/infectious; kept in that category, not in Sensory
+add	Bitter taste perception	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	Bitter taste perception (multivariate analysis)	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	Bitter taste response	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	Disturbances of sensation of smell and taste (PheCode 350.6)	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	F-acquired taste liking (derived food-liking factor)	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	Sense of smell	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'
+add	Sweet taste preference	Sensory - Taste and Smell	pure chemosensory trait (no pleiotropy), split from 'Sensory - Hearing and Smell'

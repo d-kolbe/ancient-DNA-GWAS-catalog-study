@@ -1,0 +1,33 @@
+# =============================================================================
+# config_ehg.yaml
+# =============================================================================
+# Config for Snakefile_ehg.py (EHG vs EF side-pipeline).
+# Loaded on top of config/config_analysis.yaml, which supplies analysis_output_dir
+# and the trait/panel selection (directionality_plot), so the EHG comparison
+# always uses the same trait set as the main forest figure.
+#
+# Paths are relative to the project folder (run Snakemake from there).
+# Site-specific overrides go into config/config_ehg.local.yaml (gitignored).
+# =============================================================================
+
+# Output folder of this side-pipeline. Empty = <analysis_output_dir>/ehg
+ehg_output_dir: ""
+
+# --- Inputs ------------------------------------------------------------------
+# VCF for this side-pipeline only -- separate from config.yaml's `vcf`.
+# Must contain both the EF and the EHG samples.
+vcf_ehg:     "data/Sakhtysh_plus_Ostorf.Ostorf_MAF5.GP0.99.vcf.gz"
+ef_samples:  "resources/EF_samples.txt"
+ehg_samples: "resources/EHG_samples.txt"
+
+# Vertical dodge (row units) between the WHG-vs-EF dot and the EHG-vs-EF dot
+ehg_y_offset: 0.18
+
+# Bootstrap CI (Option A only -- resample individuals, no SNP dropout)
+n_bootstrap:    1000
+ci_level:       0.95
+bootstrap_seed: 42
+
+# --- EHG-specific addition to the shared directionality_plot block -----------
+directionality_plot:
+  color_ehg_higher: "#E8A33D"   # distinct from WHG's blue; used only in the EF-vs-EHG-only plot
